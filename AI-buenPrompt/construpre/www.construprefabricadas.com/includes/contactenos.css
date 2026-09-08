@@ -1,0 +1,10 @@
+/* CSS Document */
+
+.item{
+	clear:both;
+	padding:6px 0;
+}
+input[type="text"], textarea{
+	padding:7px;
+	width:340px;
+}

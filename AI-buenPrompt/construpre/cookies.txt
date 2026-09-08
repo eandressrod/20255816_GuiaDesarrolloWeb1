@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.construprefabricadas.com	TRUE	/	FALSE	1999999999	PHPSESSID	ei7c7k3ga08v201bveocpgulf7
+

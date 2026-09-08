@@ -1,0 +1,19 @@
+HTTrack3.50-0 launched on Mon, 07 Sep 2026 17:29:12 at https://www.construprefabricadas.com/
+(winhttrack https://www.construprefabricadas.com/ -O "C:\Users\andre\Desktop\websitesIA/construpre" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:30:41	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/images/bgpagina.jpg (from https://www.construprefabricadas.com/includes/global_new.css)
+17:30:41	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/images/bulletrojo.jpg (from https://www.construprefabricadas.com/includes/global_new.css)
+17:30:41	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/images/pieimage.jpg (from https://www.construprefabricadas.com/includes/global_new.css)
+17:30:41	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/images/show/categoria_713392583.php (from https://www.construprefabricadas.com/proyectos.php)
+17:30:41	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/images/loading.gif (from https://www.construprefabricadas.com/proyecto.php?id=32)
+17:33:21	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/popper.js (from https://www.construprefabricadas.com/includes/bootstrap4/js/bootstrap.min.js)
+17:33:21	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/images/thumb/994137692.php (from https://www.construprefabricadas.com/proyecto.php?id=162)
+17:33:21	Error: 	"Not Found" (404) at link https://www.construprefabricadas.com/images/thumb/2098305612.test (from https://www.construprefabricadas.com/proyecto.php?id=162)
+
+HTTrack Website Copier/3.50-0 mirror complete in 4 minutes 9 seconds : 1067 links scanned, 1058 files written (34283101 bytes overall) [32489721 bytes received at 130480 bytes/sec], 3079868 bytes transferred using HTTP compression in 158 files, ratio 29%, 106.7 requests per connection
+(8 errors, 0 warnings, 0 messages)

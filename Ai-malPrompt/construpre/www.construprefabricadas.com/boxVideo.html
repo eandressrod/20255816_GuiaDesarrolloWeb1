@@ -1,0 +1,17 @@
+<script type="text/javascript">
+        $(function() {
+            $('#btnCerrar').on('click', function(event) {
+				$('#boxVideo').load($(this).attr('href'));
+                $('#boxVideo').hide();
+                event.preventDefault();
+            });
+        });
+		</script>
+<div id="boxVideo">
+	<a href="#close" id="btnCerrar">Cerrar</a>
+	<iframe width="853" height="480" src="http://www.youtube.com/embed/3qyTAIz2B7U?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
+	<div class="info">
+    	<h2>Casa de concreto prefabricada en un día</h2>
+        <p>Casa construida con el apoyo de <a href="http://www.lovingwithmercy.com/El_Salvador_500.php">Loving with mercy El Salvador</a> con el propósito de brindar un techo seguro a una familia salvadoreña en el municipio de Tepecoyo.</p>
+    </div>
+</div> 

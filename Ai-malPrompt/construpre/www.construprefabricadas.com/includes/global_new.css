@@ -1,0 +1,280 @@
+
+/* CSS Document */
+body, td, th, input, select, textarea{
+	font-family:Arial, "Trebuchet MS", Tahoma;
+	font-family:Roboto, Arial, "Trebuchet MS", Tahoma;
+	font-weight:400;
+	color:#000;
+	font-size:14px;
+	line-height:1.4em;
+}
+body{
+	margin:0px;	padding:0px;
+	background-color:#006633;
+}
+h1, h2, h3{
+	margin:1em 0 1em 0;
+	padding:0px;
+	font-weight:normal;
+	line-height:normal;
+}
+h1{
+	font-size:200%;
+	font-weight:900;
+}
+h2{
+	font-size:150%;
+}
+h3{
+	font-size:110%;
+}
+h4{
+	font-size:100%;
+	color:#F3274F;
+}
+.negro{
+	color:#000000;
+	text-decoration:underline;
+}
+.negro a:hover{
+	color:#fff;
+	text-decoration:none;
+}
+a{
+	color:#009966;
+	text-decoration:none;
+	font-weight:700;
+}
+a:hover{
+	color:#FFCB01;
+	text-decoration:underline;
+}
+form{
+	margin:0;padding:0;
+}
+/*    Estilos de posicionnamiento   */
+#global{
+	width:100%;
+	margin: 0 auto;
+	padding:0px;
+	min-height:650px;
+	height:auto;
+	background:#98B7E3;
+	box-shadow:1px 1px 12px rgba(0,0,0,0.5);
+}
+#top{
+	padding:0px;
+	position:relative; z-index:300;
+	background:#fff;
+	width:100%; 
+	box-shadow:1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+/* *************  menus global ****************/
+.nav-link{
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#666;
+	font-size:16px;
+}
+.nav-link:hover{
+	color:#FED000; 
+	text-decoration:none;
+}
+#facebook-menu a{
+	color:#09C;
+	margin-left:50px;
+}
+.navbar{
+	padding-left:0;
+	padding-right:0;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+	color:#FC3;
+	border-bottom:3px solid #FC3;
+}
+section{
+	padding:20px 0;
+}
+
+#promo{
+	clear:both;
+	width:100%;
+	padding:0px;
+	height:256px;
+}
+#promoAnim{
+	float:left;
+	margin:0;
+	padding:0;
+}
+#promoAnuncio{
+	float:left;
+	margin:0;
+	padding:0;
+}
+#contenido{
+	/*
+	width:900px; margin:0 auto;
+	clear:both; margin-top:0px;
+	height:auto !important;
+	padding:0 12px 20px 12px;
+	*/
+}
+
+/* **********************  para columnas del home   ****************************/
+#group{
+	clear:both;
+	background-color:#D0ECF7;
+	height:292px;
+}
+#textos{
+	clear:both;
+}
+
+/******** para secciones internas  *************/
+#pagina{
+	clear:both;
+	text-align:left;
+	width:100%;
+	padding:0;
+	background-color:#fff;
+	min-height:40px;
+	height:81px;
+	background-image:url(../images/bgpagina.html);
+	background-repeat:no-repeat;
+}
+#paginatitulo{
+	padding:14px 0px 0px 10px;
+	color:#fff;
+	font-size:34px;
+	font-weight:bold;
+	float:left;
+}
+.proyectos{
+	font-size:24px;
+	color:#EBF5F4;
+}
+.servicios{
+	font-size:20px;
+	color:#009966;
+}
+.titulos{
+	text-transform:uppercase;
+	color:#006633;
+}
+.bloque{
+	float:left;
+	border:0;
+	height:auto;
+	width:100px;
+	padding:10px;
+	text-align: left;
+	vertical-align: middle;
+}
+.bloqueul{ margin:0; padding:0;}
+.bloqueul li{
+	list-style:none;
+	padding:6px 0;
+	border-bottom:1px solid #3A77BA;
+}
+
+.colored{
+	color:#FF8C40;
+	text-decoration:none;
+}
+.subrayado{
+	border-bottom:1px solid #F68800;
+}
+.shadow{
+	color:#A2B6BF;
+	font-size:80%;
+	box-shadow:1px 1px 12px rgba(0,0,0,0.5);
+}
+.submitBut{
+	background-color:#6292D2;
+	border:1px solid #FFF;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS";
+	font-size:11px;
+}
+.form{
+	background-color:#98B7E2;
+	color:#5E809D;
+}
+
+.formtext{
+	background-color:#C8D7DF;
+}
+.image{
+	padding:4px;
+	border:2px solid #FF9900;
+	background-color:#eee;
+	margin:10px;
+}
+.fontColor01 {
+	color: #9ED943;
+	font-weight: bold;
+}
+.regionx{
+	float:left;
+	margin:10px 4px 10px 4px;
+	padding:4px;
+	width:20%;
+	border:2px solid #eee;	
+}
+.bulletsrojos{ 
+	list-style-image: url(../images/bulletrojo.html); list-style-position:outside;
+}
+
+
+/******  Estilos para el Pie   ***********/
+#pie{
+	clear:both;  
+	position:relative; z-index:400;
+
+
+	padding:45px 0px 40px 0px;
+	color:#eee;
+	font-size:14px;
+}
+#pie a, #pie a:visited{
+	color:#eee;
+	text-decoration:none;
+	font-weight:normal;
+	
+}
+#pie a:hover{
+	color:#FF0;
+}
+#pieimage{
+	clear:both;
+	width:900px;
+	background-image:url(../images/pieimage.html);
+	background-repeat:no-repeat;
+	height:25px;
+}
+#powerby{
+	font-size:80%;
+}
+#powerby a{
+	color:#ff6600;
+}
+#facebook{
+	position:absolute;
+	top:30px;
+	left:10px;
+}
+.boton{
+	padding:10px 25px;
+	border-radius:20px;
+	background:#F90;
+	color:#fff;
+	text-align:center;
+	border:0;
+	cursor:pointer;
+}
+.page-image {
+	margin:2.6em 0;
+}
