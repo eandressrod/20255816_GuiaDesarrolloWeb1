@@ -11,7 +11,7 @@ body {
 
 main {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1160px;
     margin: auto;
     padding: 45px 0;
 }
@@ -45,9 +45,16 @@ header p {
 
 .pages-box,
 .ia-box {
-    width: 50%;
     padding: 24px;
     border: 1px solid #2b2b2b;
+}
+
+.pages-box {
+    width: 38%;
+}
+
+.ia-box {
+    width: 62%;
 }
 
 h2 {
@@ -95,6 +102,41 @@ h2 {
     border: 1px solid #343434;
 }
 
+.original-site {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #343434;
+    font-size: 0.85rem;
+}
+
+.original-site span {
+    color: #777777;
+}
+
+.original-site a {
+    color: #ededed;
+    text-decoration: none;
+}
+
+.original-site a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.ia-diagnosis {
+    margin-bottom: 18px;
+    color: #bcbcbc;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.ia-diagnosis p + p {
+    margin-top: 5px;
+}
+
 .ia-links {
     display: flex;
     gap: 10px;
@@ -129,4 +171,82 @@ footer {
     padding-top: 28px;
     color: #777777;
     font-size: 0.75rem;
+}
+
+.prompt-main {
+    max-width: 1160px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #bcbcbc;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #ffffff;
+}
+
+.prompt-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 35px 0;
+}
+
+.prompt-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #2b2b2b;
+}
+
+.prompt-card h2 {
+    margin-bottom: 8px;
+}
+
+.prompt-card pre {
+    margin: 18px 0 0;
+    padding: 16px;
+    border: 1px solid #343434;
+    background: #111111;
+    color: #dedede;
+    font: 0.82rem/1.55 Consolas, "Courier New", monospace;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.prompt-card h3 {
+    margin-top: 24px;
+    font-size: 1rem;
+}
+
+@media (max-width: 760px) {
+    main {
+        width: 92%;
+        padding-top: 28px;
+    }
+
+    .main-zones {
+        flex-direction: column;
+    }
+
+    .pages-box,
+    .ia-box {
+        width: 100%;
+    }
+
+    .original-site,
+    .ia-links {
+        flex-direction: column;
+    }
+
+    .prompt-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .ia-links a {
+        width: 100%;
+    }
 }

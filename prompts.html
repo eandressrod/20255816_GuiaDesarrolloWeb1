@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparación de prompts - Reto IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="prompt-main">
+        <a class="back-link" href="index.html">← Volver a la Guía 1</a>
+        <header>
+            <h1>Comparación de prompts</h1>
+        </header>
+
+        <section class="prompt-comparison">
+            <article class="prompt-card">
+                <h2>Prompt simple</h2>
+                <pre><code>mejora esta página web</code></pre>
+            </article>
+
+            <article class="prompt-card">
+                <h2>Prompt complejo</h2>
+
+                <h3>AGENTS.md</h3>
+                <pre><code># AGENTS.md — CONSTRUPRE Website Modernization
+
+## 1. Mission
+
+You are working on the website of **CONSTRUPRE (Construcciones Prefabricadas)**, an El Salvador construction company focused on prefabricated construction.
+
+Your goal is **not merely to make the website prettier**. The goal is to turn the existing site into a modern, credible, fast, responsive and conversion-oriented website while preserving the company's real content, project history and technical credibility.
+
+The starting files may come from an **HTTrack mirror of the public website**. Treat them as a public frontend snapshot, not as the original server source code.
+
+## 2. Source-of-truth rules
+
+Use this priority order when deciding what is true:
+
+1. The files in the local project/mirror.
+2. Content already present in the original CONSTRUPRE public website.
+3. This `AGENTS.md` business context.
+4. Reasonable UX or implementation decisions that do not create new factual claims.
+
+Never invent business facts just to fill a design.
+
+Do **not** invent or assume:
+
+- prices or price ranges;
+- construction times;
+- guarantees;
+- certifications;
+- awards;
+- client names;
+- testimonials;
+- financing plans;
+- promotions;
+- exact number of completed projects unless derived from the local data;
+- exact current years of experience beyond the wording already published by the company;
+- WhatsApp numbers or email addresses that are not verified in the source files;
+- backend capabilities that do not exist in the mirror.
+
+If information is uncertain, preserve the original wording or leave it out.
+
+## 3. Business context
+
+### Brand
+
+**CONSTRUPRE** / **Construcciones Prefabricadas**
+
+The company presents itself as:
+
+- 100% Salvadoran;
+- experienced in the prefabricated construction market;
+- focused on service, quality and professionalism;
+- capable of fabrication, design and construction;
+- oriented toward personalized projects based on the client's needs, ideas and goals.
+
+The existing company copy states **“Más de 24 años de experiencia”**. Preserve this statement if needed, but do not automatically convert it to a larger number based only on the current calendar year.
+
+The company also mentions Christian values in its institutional description. Keep that information in an appropriate company/about section when relevant, but it does not need to dominate the visual identity.
+
+### Core value proposition
+
+CONSTRUPRE should feel like an established construction company that can take a customer's idea and turn it into a practical, customized prefabricated construction project.
+
+The website should communicate:
+
+- experience;
+- construction know-how;
+- personalization;
+- solidity and durability;
+- practical/economic value;
+- attractive finishes;
+- real completed work;
+- trust.
+
+Do not position the company merely as a seller of “cheap prefab houses”.
+
+## 4. Services and project types
+
+The official site lists services including:
+
+- Tapiales;
+- Casas Básicas;
+- Casas con Acabados;
+- Ranchos;
+- Piscinas.
+
+The project portfolio also contains categories such as:
+
+- Casas Básicas;
+- Casas con acabados;
+- Madera;
+- Ranchos;
+- Tapiales;
+- Trabajos en bloques.
+
+The company's actual portfolio includes a wider range of work such as houses, apartments, terraces, cabins, warehouses, offices, recreational projects, retaining/perimeter solutions and related construction work.
+
+Do not design the information architecture as if CONSTRUPRE only builds houses.
+
+## 5. Technical credibility
+
+The existing services page states that CONSTRUPRE's prefabricated elements are made with:
+
+- high-strength concrete rated at **210 kg/cm²**;
+- structural reinforcement using **grade 70 steel bars**.
+
+These are useful trust-building details and can be surfaced in a section about the construction system, materials or quality.
+
+Do not add new engineering claims, certifications or structural guarantees that are not present in the source material.
+
+## 6. Portfolio is a primary asset
+
+The existing site contains a large archive of real completed projects. This archive is one of the strongest assets of the business.
+
+Project pages can contain:
+
+- project name;
+- project category;
+- photos;
+- construction area in m²;
+- walls;
+- roof structure and covering;
+- floors;
+- doors;
+- windows;
+- bathrooms;
+- kitchen/bar details;
+- electrical installations;
+- hydraulic installations;
+- terraces;
+- septic systems;
+- pools;
+- retaining walls;
+- perimeter walls;
+- additional works;
+- transport, supervision or administration notes.
+
+### Portfolio requirements
+
+Before redesigning the portfolio:
+
+1. Recursively inspect the mirror.
+2. Identify every project page.
+3. Identify project categories.
+4. Identify and map project images to their project pages.
+5. Detect duplicate titles/pages and HTTrack naming artifacts.
+6. Preserve the original project content.
+7. Build a structured inventory before large-scale refactoring.
+
+Do not replace the real portfolio with a handful of generic cards or stock photos.
+
+Prefer the company's real project photographs as the main visual language.
+
+### Recommended project UX
+
+A modern project listing should support:
+
+- responsive image grid;
+- clear categories/filters when technically appropriate;
+- useful project titles;
+- consistent image ratios without destructive cropping;
+- fast loading and lazy loading;
+- a clear path to individual project details.
+
+An individual project page should ideally include:
+
+1. strong hero image;
+2. project name;
+3. category;
+4. area in m² when available;
+5. image gallery;
+6. concise project description or summary based on source content;
+7. structured technical specifications;
+8. related projects when data allows;
+9. call to action to contact/request a quote.
+
+Do not dump technical specifications into one unreadable paragraph. Group and label them clearly.
+
+## 7. Target users
+
+Design primarily for people in El Salvador who may:
+
+- own land and want to build;
+- be evaluating prefabricated construction;
+- want a basic house or a house with finishes;
+- need a perimeter wall/tapial;
+- want a country, beach or mountain property;
+- need a ranch, terrace or recreational structure;
+- require a customized construction solution;
+- be comparing construction options before contacting a provider.
+
+Also account for commercial/institutional use cases because the portfolio includes non-residential work.
+
+The audience should not need construction expertise to understand the site.
+
+## 8. Website goals
+
+The redesigned site must help a visitor quickly answer:
+
+- What does CONSTRUPRE build?
+- Why should I trust this company?
+- What does its prefabricated construction system look like?
+- What real projects has it completed?
+- Can it customize a project to my needs?
+- How do I contact the company or request a quote?
+
+Primary goals:
+
+1. Improve perceived trust and professionalism.
+2. Make real completed projects easy to discover.
+3. Explain services clearly.
+4. Explain technical quality without overwhelming non-technical users.
+5. Increase qualified contact/quote inquiries.
+6. Provide an excellent mobile experience.
+7. Preserve important historical/project content.
+8. Improve SEO, accessibility and performance.
+
+## 9. Visual direction
+
+The design should feel:
+
+- architectural;
+- contemporary;
+- professional;
+- solid;
+- clean;
+- warm;
+- trustworthy;
+- premium but accessible.
+
+It should **not** look like a generic SaaS/startup template.
+
+Avoid unnecessary use of:
+
+- neon colors;
+- excessive gradients;
+- glassmorphism;
+- futuristic UI;
+- giant decorative icons;
+- generic stock illustrations;
+- excessive animation;
+- oversized marketing typography that hides actual project content.
+
+Use real construction photography as the primary visual asset.
+
+Inspect the existing logo, colors and assets before defining a new design system. Modernize the existing identity rather than arbitrarily replacing the brand.
+
+Subtle references to concrete, wood, steel, architecture or construction geometry are acceptable when they support the content rather than becoming decoration for its own sake.
+
+## 10. Suggested information architecture
+
+Use the local content to validate the final structure, but a strong default is:
+
+- Inicio
+- Empresa / Nosotros
+- Servicios
+- Proyectos
+- Contacto
+- CTA: Solicitar cotización / Cotizar proyecto
+
+### Suggested homepage flow
+
+1. Header/navigation.
+2. Hero using a strong real project image.
+3. Clear value proposition.
+4. Trust/experience indicators based only on verified content.
+5. Main services.
+6. Featured real projects.
+7. Why CONSTRUPRE.
+8. Construction system / materials / technical quality.
+9. Portfolio CTA.
+10. Contact/quote CTA.
+11. Footer with verified company information.
+
+Do not force this exact order if the actual content supports a better UX.
+
+## 11. Contact information
+
+The public website currently lists:
+
+**Office**&#32;&#32;
+15 Av. Sur, Block/Blok “D” No. 14, Residencial Bethania, Santa Tecla, La Libertad, El Salvador.
+
+**Plant**&#32;&#32;
+Km. 29 Carretera a Sonsonate, Lotificación El Edén, Lourdes Colón, La Libertad, El Salvador.
+
+**Office phone**&#32;&#32;
+(503) 2228-0022
+
+Before publishing these details in a redesigned page, verify them against the local mirror.
+
+If the local files include a verified email address or WhatsApp number, it may be used. Otherwise, do not invent one.
+
+## 12. Copywriting
+
+Write in natural, professional Spanish appropriate for El Salvador/Central America.
+
+Tone:
+
+- professional;
+- straightforward;
+- warm;
+- credible;
+- technically informed without unnecessary jargon.
+
+You may improve spelling, grammar, hierarchy and readability, but preserve the factual meaning of the original content.
+
+Avoid generic marketing filler such as:
+
+- “redefiniendo el futuro”;
+- “innovación que transforma”;
+- “experiencias únicas”;
+- unsupported claims such as “líderes absolutos” or “la mejor empresa”.
+
+Prefer concrete messages backed by the portfolio and technical information.
+
+## 13. HTTrack / legacy mirror handling
+
+Assume the starting directory may contain files created by HTTrack, including:
+
+- `hts-cache/`;
+- HTTrack-generated `index.html`;
+- downloaded HTML versions of PHP pages;
+- filenames containing query-string artifacts;
+- rewritten relative links;
+- duplicate resource directories;
+- external assets cached locally;
+- broken or partially downloaded links.
+
+The mirror does **not** imply access to:
+
+- original PHP source code;
+- MySQL database;
+- admin panel;
+- server configuration;
+- mail server;
+- private APIs;
+- authentication logic.
+
+Never pretend those systems exist.
+
+If a form has no working backend, implement it as a clearly frontend-only form or preserve the existing endpoint without claiming successful submission. Do not create fake success behavior that can mislead the site owner.
+
+## 14. Technical approach
+
+### Before coding
+
+First inspect the project and report:
+
+- top-level file structure;
+- HTML/PHP-mirror pages found;
+- CSS and JS files;
+- image directories and approximate asset counts;
+- project pages and categories;
+- external dependencies;
+- broken links/assets;
+- duplicate content;
+- encoding problems;
+- HTTrack-specific artifacts;
+- current responsive behavior;
+- current SEO/accessibility issues.
+
+Then propose a concise implementation plan.
+
+### Framework policy
+
+Do not introduce React, Next.js, Vue, Astro, Tailwind or any other framework merely because it is modern.
+
+If the site can be rebuilt cleanly using semantic HTML, modern CSS and lightweight JavaScript, that is a valid and often preferred solution—especially if the user wants it to run directly with VS Code Live Server.
+
+If a framework provides a concrete benefit for managing the large project portfolio, explain the benefit before restructuring the project.
+
+When a `package.json` or existing build system is present, inspect it before choosing commands or dependencies.
+
+### Preserve assets
+
+Do not delete original project images or source content during early refactoring.
+
+If restructuring:
+
+- preserve originals until migration is verified;
+- use deterministic filenames;
+- avoid unnecessary duplicate images;
+- generate optimized derivatives rather than destroying source files.
+
+## 15. Frontend standards
+
+Prefer:
+
+- semantic HTML5;
+- accessible navigation;
+- CSS custom properties/design tokens;
+- responsive layout with Grid/Flexbox;
+- mobile-first breakpoints;
+- modular/reusable components or partials when the chosen stack supports them;
+- minimal JavaScript;
+- progressive enhancement;
+- meaningful image alt text;
+- keyboard-visible focus states;
+- accessible labels on form fields;
+- logical heading hierarchy;
+- buttons for actions and anchors for navigation;
+- reduced-motion respect for users who request it.
+
+Avoid:
+
+- inline styles unless necessary;
+- repeated hard-coded values that should be tokens;
+- JavaScript for layout tasks CSS can solve;
+- massive libraries for trivial interactions;
+- hover-only interactions that fail on touch devices.
+
+## 16. Performance
+
+The site is image-heavy, so image handling matters.
+
+Implement where appropriate:
+
+- responsive `srcset`/sizes;
+- modern optimized formats when a safe conversion workflow exists;
+- lazy loading below the fold;
+- explicit image dimensions/aspect ratios to reduce layout shift;
+- appropriately sized thumbnails for portfolio grids;
+- minimal blocking JavaScript;
+- optimized font loading;
+- preservation of high-quality source images.
+
+Do not reduce project photography to visibly poor quality just to improve a synthetic score.
+
+## 17. SEO
+
+Prioritize natural relevance for searches such as:
+
+- casas prefabricadas El Salvador;
+- construcción prefabricada El Salvador;
+- casas prefabricadas;
+- tapiales prefabricados;
+- construcción en El Salvador.
+
+Use:
+
+- unique page titles;
+- useful meta descriptions;
+- one clear H1 per primary page;
+- semantic headings;
+- descriptive alt text;
+- clean internal links;
+- canonical URLs when the deployment architecture is known;
+- Open Graph metadata where appropriate;
+- structured data only when it accurately describes the business/content.
+
+Do not keyword-stuff.
+
+## 18. Project-data normalization
+
+If many legacy project pages repeat the same markup, consider extracting project content into structured data before rebuilding the UI.
+
+Possible normalized fields:
+
+```text
+id
+slug
+title
+category
+area_m2
+location
+summary
+images[]
+specifications[]
+additional_works[]
+legacy_url
+```
+
+Only populate fields from verifiable source content. Do not infer a location merely from a project title unless that interpretation is unambiguous and useful.
+
+If normalization is performed, create a validation method to ensure no project or image was silently lost.
+
+## 19. Forms and conversion UX
+
+A quote/contact form may include fields such as:
+
+- Nombre;
+- Teléfono;
+- Correo;
+- Tipo de proyecto;
+- Mensaje.
+
+Keep it short.
+
+Do not require unnecessary personal data.
+
+If no backend endpoint exists, document this limitation clearly for the repository owner.
+
+Calls to action should be concrete, for example:
+
+- Ver proyectos
+- Conocer nuestros servicios
+- Solicitar cotización
+- Hablar sobre mi proyecto
+
+Avoid aggressive or misleading urgency.
+
+## 20. Required workflow
+
+### Phase 1 — Audit
+
+Before major edits:
+
+1. inspect the full repository/mirror;
+2. inventory content and assets;
+3. identify technical constraints;
+4. identify what is real content versus HTTrack scaffolding;
+5. identify high-value content that must be preserved.
+
+### Phase 2 — Plan
+
+Briefly state:
+
+- proposed architecture;
+- chosen technical approach;
+- design-system direction;
+- portfolio strategy;
+- migration risks;
+- what will remain static versus what would require backend work.
+
+### Phase 3 — Implement
+
+Implement the redesign rather than only producing a mockup or a written recommendation.
+
+### Phase 4 — QA
+
+Validate at minimum:
+
+- homepage;
+- navigation;
+- mobile layout;
+- desktop layout;
+- project listing;
+- multiple individual project pages;
+- local images;
+- internal links;
+- console errors;
+- keyboard navigation;
+- form behavior;
+- broken assets;
+- basic performance problems.
+
+If there is a test/build/lint setup, run it.
+
+### Phase 5 — Handoff
+
+At completion, report:
+
+- files added;
+- files changed;
+- files removed;
+- how to run the site locally;
+- build commands if applicable;
+- tests/checks executed;
+- known limitations;
+- features that still require the original backend or hosting configuration.
+
+## 21. Definition of done
+
+The task is not complete until:
+
+- the site is actually runnable;
+- the redesign works on mobile and desktop;
+- the company identity is recognizable;
+- real project content has been preserved;
+- the portfolio is materially easier to use;
+- major links/assets are not broken;
+- contact information is based on verified source content;
+- no fake business claims were introduced;
+- no fake backend behavior was introduced;
+- the implementation is maintainable;
+- the repository owner receives clear run/handoff instructions.
+
+## 22. First response behavior for a new Codex task
+
+When asked to modernize this repository, do not immediately rewrite everything.
+
+Start by inspecting the repository and respond with a short audit and plan. Then proceed with implementation unless the user explicitly asks for analysis only.
+
+When making design decisions, prioritize in this order:
+
+1. real project photography and content;
+2. clarity and trust;
+3. mobile usability;
+4. portfolio discoverability;
+5. performance/accessibility;
+6. visual polish.
+
+A beautiful landing page that loses the real portfolio is a regression, not an improvement.</code></pre>
+
+                <h3>Prompt</h3>
+                <pre><code>Lee AGENTS.md COMPLETO antes de realizar cualquier cambio y úsalo como la
+fuente principal de contexto, reglas de negocio e identidad de CONSTRUPRE.
+
+Este repositorio es una copia obtenida mediante HTTrack del sitio web actual de
+CONSTRUPRE.
+
+El sitio descargado representa principalmente el frontend público del sitio
+actual y puede contener:
+
+- páginas HTML generadas originalmente desde PHP;
+- nombres de archivos extraños producto de HTTrack;
+- parámetros de query string convertidos a archivos;
+- CSS antiguo;
+- JavaScript antiguo;
+- enlaces absolutos;
+- recursos externos;
+- fotografías;
+- contenido histórico;
+- páginas de proyectos;
+- artefactos propios de HTTrack.
+
+No asumas que existe el backend PHP original ni la base de datos.
+
+# OBJETIVO PRINCIPAL
+
+Quiero modernizar completamente el sitio web de CONSTRUPRE.
+
+No quiero solamente cambiar colores, tipografía y botones.
+
+Quiero una transformación real de:
+
+- tecnología;
+- arquitectura frontend;
+- diseño visual;
+- experiencia de usuario;
+- navegación;
+- presentación de proyectos;
+- rendimiento;
+- responsive design;
+- accesibilidad;
+- SEO;
+- conversión;
+- percepción de marca.
+
+El nuevo sitio debe sentirse como una evolución moderna, profesional y sólida
+de CONSTRUPRE.
+
+NO debe sentirse como una marca diferente.
+
+# PRINCIPIO CENTRAL
+
+CONSTRUPRE ya tiene identidad.
+
+Antes de inventar una identidad nueva, debes descubrirla dentro del proyecto.
+
+Analiza profundamente:
+
+- logotipo;
+- colores existentes;
+- fotografías;
+- proyectos;
+- materiales;
+- estilos gráficos;
+- lenguaje;
+- formas;
+- composición;
+- iconografía;
+- historia;
+- servicios;
+- personalidad de marca;
+- tipo de construcción;
+- contexto salvadoreño.
+
+Utiliza esta información para construir la nueva dirección visual.
+
+NO hagas un rebranding arbitrario.
+
+La identidad visual de la nueva web debe salir principalmente del contexto
+real de CONSTRUPRE.
+
+Las webs de referencia que mencionaré después sirven únicamente para entender
+el nivel de diseño, composición, movimiento y experiencia que estoy buscando.
+
+# REFERENCIAS DE DISEÑO
+
+Utiliza estas dos webs como referencias de calidad:
+
+https://concorda.co/
+
+https://www.disa.com.sv/
+
+Si tienes acceso a internet o navegador, navega por ambas páginas antes de
+definir la propuesta visual.
+
+Estudia especialmente:
+
+- hero;
+- composición editorial;
+- escala de imágenes;
+- jerarquía tipográfica;
+- ritmo entre secciones;
+- uso del espacio;
+- presentación de proyectos;
+- layouts;
+- grids;
+- navegación;
+- headers;
+- footers;
+- microinteracciones;
+- animaciones;
+- transiciones;
+- comportamiento al hacer scroll;
+- hover;
+- cambios de estado;
+- galerías;
+- interacción móvil;
+- ritmo visual general.
+
+IMPORTANTE:
+
+NO copies ninguna de estas páginas.
+
+No copies:
+
+- HTML;
+- CSS;
+- JavaScript;
+- textos;
+- fotografías;
+- iconos;
+- branding;
+- layouts exactos;
+- secuencia exacta de secciones;
+- animaciones idénticas;
+- composiciones idénticas.
+
+Extrae PRINCIPIOS de diseño y experiencia.
+
+Después interprétalos de manera original utilizando la identidad real de
+CONSTRUPRE.
+
+La intención es alcanzar un nivel similar de sofisticación, no reproducir
+esas páginas.
+
+# QUÉ TOMAR COMO REFERENCIA DE CONCORDA
+
+Utiliza Concorda principalmente como referencia conceptual para:
+
+- diseño arquitectónico sofisticado;
+- uso de fotografías de gran formato;
+- composición editorial;
+- espacios amplios;
+- jerarquía;
+- proyectos como protagonistas;
+- ritmo visual;
+- sensación premium;
+- transiciones;
+- scroll;
+- microinteracciones;
+- calidad de presentación.
+
+No copies su identidad.
+
+# QUÉ TOMAR COMO REFERENCIA DE DISA
+
+Utiliza DISA principalmente como referencia contextual para:
+
+- comunicación de empresa constructora;
+- credibilidad;
+- presencia corporativa;
+- contexto salvadoreño;
+- servicios;
+- proyectos;
+- jerarquía de contenido;
+- contacto;
+- comunicación comercial.
+
+No copies su identidad.
+
+# RESULTADO VISUAL ESPERADO
+
+La nueva CONSTRUPRE debe sentirse:
+
+- arquitectónica;
+- contemporánea;
+- sólida;
+- elegante;
+- profesional;
+- confiable;
+- visual;
+- técnica;
+- humana;
+- premium pero accesible.
+
+Debe sentirse vinculada a:
+
+- construcción;
+- concreto;
+- arquitectura;
+- materiales;
+- espacios;
+- casas;
+- proyectos reales;
+- ingeniería;
+- terreno;
+- estructura.
+
+NO quiero una estética de:
+
+- startup SaaS;
+- empresa de software;
+- fintech;
+- IA;
+- criptomonedas;
+- videojuego;
+- aplicación tecnológica.
+
+Evita abusar de:
+
+- glassmorphism;
+- gradientes;
+- blobs;
+- neón;
+- cards flotantes genéricas;
+- iconos enormes;
+- fondos futuristas;
+- animaciones gratuitas.
+
+Las fotografías reales de CONSTRUPRE deben ser el principal recurso visual.
+
+# AUDITORÍA OBLIGATORIA
+
+ANTES DE PROGRAMAR:
+
+1. Lee AGENTS.md completo.
+2. Recorre recursivamente todo el repositorio.
+3. Identifica todas las páginas.
+4. Identifica todos los proyectos.
+5. Identifica todas las fotografías.
+6. Identifica todos los logos.
+7. Identifica CSS.
+8. Identifica JavaScript.
+9. Identifica fuentes.
+10. Identifica iconos.
+11. Identifica recursos externos.
+12. Identifica URLs antiguas.
+13. Detecta query strings.
+14. Detecta enlaces rotos.
+15. Detecta artefactos de HTTrack.
+16. Detecta páginas duplicadas.
+17. Detecta imágenes duplicadas.
+18. Detecta assets que no son necesarios.
+19. Identifica categorías de proyectos.
+20. Extrae información de proyectos.
+21. Identifica información corporativa.
+22. Identifica servicios.
+23. Identifica información de contacto.
+24. Identifica elementos visuales reutilizables.
+25. Identifica características actuales de la marca.
+
+Antes de implementar, entrega un resumen breve de:
+
+- arquitectura actual;
+- tecnologías actuales;
+- páginas;
+- cantidad aproximada de proyectos;
+- categorías;
+- cantidad aproximada de imágenes;
+- identidad visual detectada;
+- colores encontrados;
+- logotipo;
+- recursos importantes;
+- problemas;
+- oportunidades;
+- contenido crítico que no debe perderse.
+
+Después continúa con la implementación sin esperar confirmación, salvo que
+exista un problema que impida continuar de forma segura.
+
+# IDENTIDAD VISUAL
+
+Construye un sistema visual a partir de la marca existente.
+
+Define:
+
+- colores principales;
+- colores secundarios;
+- neutros;
+- tipografía;
+- escala tipográfica;
+- spacing;
+- container widths;
+- border radius;
+- sombras;
+- botones;
+- enlaces;
+- grids;
+- estilos de imagen;
+- estilos de secciones;
+- animaciones;
+- estados hover;
+- focus states;
+- componentes.
+
+No selecciones colores arbitrariamente antes de inspeccionar los archivos.
+
+Si el logo tiene colores reconocibles, utilízalos como punto de partida.
+
+Moderniza la identidad sin destruirla.
+
+# MIGRACIÓN TECNOLÓGICA
+
+No quiero quedarme limitado por la estructura antigua de HTTrack.
+
+Evalúa qué tecnología moderna es la más apropiada para este proyecto.
+
+Prioriza:
+
+- HTML pre-renderizado;
+- SEO;
+- performance;
+- mantenibilidad;
+- rutas limpias;
+- componentes reutilizables;
+- optimización de imágenes;
+- escalabilidad;
+- facilidad de deployment.
+
+Evalúa especialmente:
+
+- Astro;
+- Next.js;
+- otra alternativa SSR/SSG apropiada.
+
+No utilices una tecnología solamente porque esté de moda.
+
+Justifica la selección según las necesidades reales del proyecto.
+
+Dado que esta web contiene principalmente:
+
+- páginas corporativas;
+- servicios;
+- contenido;
+- proyectos;
+- muchas fotografías;
+
+prioriza soluciones de generación estática o server-side rendering.
+
+Evita convertir innecesariamente toda la web en una SPA.
+
+Evita enviar JavaScript al navegador cuando no sea necesario.
+
+Si utilizas React, hidrata únicamente componentes que realmente necesiten
+interactividad.
+
+# HOME
+
+La página principal debe llamar la atención desde el primer segundo.
+
+El usuario debe entender rápidamente:
+
+- qué es CONSTRUPRE;
+- qué construye;
+- por qué confiar;
+- qué proyectos ha realizado;
+- cómo cotizar.
+
+## HEADER
+
+Crear un header moderno.
+
+Debe incluir aproximadamente:
+
+- logo;
+- Inicio;
+- Empresa;
+- Servicios;
+- Proyectos;
+- Contacto;
+- CTA para cotización.
+
+Puede convertirse en sticky.
+
+Puede cambiar sutilmente de apariencia al hacer scroll.
+
+Evita hacerlo excesivamente grande.
+
+## HERO
+
+El hero debe generar impacto.
+
+Utiliza una fotografía REAL potente de un proyecto de CONSTRUPRE.
+
+Evita stock.
+
+La imagen debe comunicar inmediatamente:
+
+arquitectura + construcción + calidad + experiencia.
+
+Debe contener:
+
+- headline fuerte;
+- texto breve;
+- CTA para proyectos;
+- CTA para cotización.
+
+Experimenta con composiciones modernas.
+
+No hagas el típico hero genérico centrado con botón debajo si existe una
+solución visual más interesante.
+
+Puedes considerar:
+
+- texto superpuesto;
+- fotografía fullscreen;
+- composiciones divididas;
+- crop arquitectónico;
+- layers;
+- pequeños elementos técnicos;
+- transiciones suaves.
+
+# PROYECTOS COMO ELEMENTO PRINCIPAL
+
+El portfolio es uno de los mayores activos de CONSTRUPRE.
+
+Debe convertirse en una parte central de la experiencia.
+
+No escondas los proyectos detrás de navegación secundaria.
+
+Utiliza proyectos destacados desde la home.
+
+Quiero que las fotografías llamen la atención.
+
+Experimenta con:
+
+- grids editoriales;
+- layouts asimétricos;
+- fotografías grandes;
+- masonry controlado;
+- proyecto destacado;
+- scroll horizontal;
+- composiciones tipo magazine;
+- galerías;
+- previews;
+- hover;
+- transiciones de imagen;
+- zoom muy sutil;
+- cambio de información;
+- categorías;
+- storytelling visual.
+
+No conviertas todos los proyectos en cards idénticas.
+
+Los layouts pueden tener variaciones controladas.
+
+El resultado debe seguir siendo claro y usable.
+
+# PÁGINA DE PROYECTOS
+
+Crear una ruta limpia:
+
+/proyectos
+
+Debe incluir:
+
+- buena introducción;
+- proyectos;
+- fotografía;
+- nombre;
+- categoría;
+- ubicación cuando exista;
+- área cuando exista;
+- filtros;
+- responsive excelente;
+- navegación accesible.
+
+Utiliza las categorías REALES encontradas durante la auditoría.
+
+Los filtros deben funcionar sin recargar innecesariamente.
+
+Prioriza velocidad.
+
+# PÁGINA INDIVIDUAL DE PROYECTO
+
+Cada proyecto debe sentirse como un caso real de trabajo realizado.
+
+Usa URLs limpias:
+
+/proyectos/[slug]
+
+Ejemplo conceptual:
+
+/proyectos/casa-prefabricada-apaneca
+
+en lugar de:
+
+/proyecto.php?id=114
+
+Cada proyecto debería poder incluir:
+
+- hero;
+- nombre;
+- categoría;
+- ubicación;
+- área;
+- galería;
+- descripción;
+- especificaciones;
+- características;
+- materiales;
+- fotografías;
+- proyectos relacionados;
+- CTA.
+
+Utiliza únicamente datos existentes.
+
+NO inventes información.
+
+# GALERÍAS
+
+Las fotografías deben poder disfrutarse correctamente.
+
+Considera:
+
+- grid editorial;
+- lightbox;
+- navegación;
+- imágenes fullscreen;
+- gestos móviles;
+- thumbnails si aportan valor;
+- lazy loading;
+- responsive images.
+
+No cargues todas las fotografías en resolución completa inicialmente.
+
+Optimiza.
+
+# ANIMACIONES
+
+Quiero una experiencia moderna y cuidada.
+
+Puedes inspirarte en el nivel de movimiento visto en las webs de referencia.
+
+Utiliza animaciones como:
+
+- reveal de texto;
+- aparición de imágenes;
+- cambios de clip;
+- pequeñas máscaras;
+- transiciones de sección;
+- desplazamientos sutiles;
+- hover;
+- microinteracciones;
+- header transitions;
+- gallery transitions.
+
+Pero sigue estas reglas:
+
+1. No copies animaciones exactas de las referencias.
+2. No animes todo.
+3. No sacrifiques usabilidad.
+4. No sacrifiques SEO.
+5. No sacrifiques Core Web Vitals.
+6. No sacrifiques accesibilidad.
+7. Respeta prefers-reduced-motion.
+8. Evita dependencias enormes solamente por efectos visuales.
+
+Si una animación puede hacerse eficientemente con CSS, considera CSS.
+
+Si necesitas una librería como GSAP u otra herramienta, úsala únicamente si
+aporta un beneficio claro.
+
+# SCROLL
+
+El scroll debe sentirse fluido y profesional.
+
+Puedes utilizar efectos sutiles ligados al desplazamiento.
+
+Evita scroll-jacking agresivo.
+
+El usuario debe seguir teniendo control natural sobre la página.
+
+# SERVICIOS
+
+Moderniza la presentación de servicios.
+
+No utilices únicamente una cuadrícula de cards genéricas.
+
+Busca composiciones vinculadas a arquitectura y construcción.
+
+Utiliza imágenes reales cuando sea posible.
+
+Los servicios deben conectarse con proyectos relevantes.
+
+Ejemplo:
+
+Casas prefabricadas
+↓
+Ver proyectos relacionados
+
+Tapiales
+↓
+Ver proyectos relacionados
+
+Ranchos
+↓
+Ver proyectos relacionados
+
+# STORYTELLING
+
+Utiliza la home para crear una narrativa.
+
+Ejemplo conceptual:
+
+Impacto visual
+↓
+Qué hace CONSTRUPRE
+↓
+Proyectos
+↓
+Experiencia
+↓
+Sistema constructivo
+↓
+Servicios
+↓
+Más proyectos
+↓
+Confianza
+↓
+Cotización
+
+No es obligatorio usar exactamente este orden.
+
+Define el mejor flujo después de analizar los contenidos.
+
+# SEO: OBJETIVO ESTRATÉGICO
+
+Uno de los principales objetivos de esta modernización es mejorar al máximo las
+posibilidades de posicionamiento orgánico de CONSTRUPRE.
+
+No prometas posiciones específicas en Google.
+
+No utilices black-hat SEO.
+
+No hagas keyword stuffing.
+
+Construye una base SEO técnicamente excelente.
+
+Presta atención a búsquedas relacionadas con:
+
+- casas prefabricadas El Salvador;
+- casas prefabricadas en El Salvador;
+- construcción prefabricada El Salvador;
+- construcciones prefabricadas;
+- casas prefabricadas de concreto;
+- tapiales prefabricados;
+- muros prefabricados;
+- construcción de casas;
+- construcción El Salvador;
+- ranchos;
+- casas de campo;
+- proyectos prefabricados.
+
+Investiga dentro del contenido original qué términos son realmente apropiados.
+
+# SEO TÉCNICO
+
+Implementa correctamente:
+
+- semantic HTML;
+- title;
+- meta description;
+- canonical;
+- Open Graph;
+- headings;
+- URLs limpias;
+- sitemap.xml;
+- robots.txt;
+- alt text;
+- breadcrumbs;
+- internal linking;
+- structured data;
+- página 404;
+- redirects;
+- responsive images;
+- lazy loading;
+- preloading estratégico;
+- metadata social.
+
+# SEO LOCAL
+
+CONSTRUPRE opera en El Salvador.
+
+Implementa SEO local correctamente.
+
+Evalúa usar Schema.org:
+
+- Organization;
+- LocalBusiness;
+- Service;
+- BreadcrumbList;
+- WebSite;
+- WebPage;
+- ImageObject.
+
+Utiliza solo schemas semánticamente correctos.
+
+No inventes datos.
+
+Mantén consistencia en:
+
+- nombre;
+- dirección;
+- teléfono;
+- empresa;
+- ubicación.
+
+# SEO DEL PORTAFOLIO
+
+Cada proyecto real representa una oportunidad de indexación.
+
+Cada proyecto debe tener:
+
+- URL descriptiva;
+- title propio;
+- meta description;
+- H1;
+- fotografías;
+- alt text;
+- breadcrumbs;
+- enlaces internos;
+- proyectos relacionados;
+- contexto suficiente.
+
+No generes contenido artificial solamente para SEO.
+
+Utiliza datos reales.
+
+# MIGRACIÓN SEO
+
+El sitio antiguo puede tener URLs indexadas.
+
+NO destruyas esas URLs.
+
+Crea un inventario de URLs antiguas importantes.
+
+Define mappings:
+
+URL antigua -&gt; URL nueva
+
+Ejemplo:
+
+/proyecto.php?id=114
+-&gt;
+/proyectos/nombre-del-proyecto
+
+Prepara redirecciones 301.
+
+Documenta las redirecciones.
+
+Evita:
+
+- 404 innecesarios;
+- duplicados;
+- pérdida de URLs importantes;
+- cadenas de redirecciones;
+- canonical incorrectos.
+
+# ENLAZADO INTERNO
+
+Diseña una arquitectura donde servicios y proyectos se relacionen.
+
+Ejemplo:
+
+/servicios/casas-prefabricadas
+↓
+proyectos relacionados
+↓
+detalle del proyecto
+↓
+otros proyectos
+↓
+cotización
+
+Utiliza enlaces internos descriptivos.
+
+# PERFORMANCE
+
+La nueva web debe sentirse rápida.
+
+Prioriza Core Web Vitals:
+
+- LCP;
+- CLS;
+- INP;
+- TTFB.
+
+Optimiza:
+
+- imágenes;
+- fuentes;
+- JavaScript;
+- CSS;
+- scripts externos;
+- recursos above-the-fold.
+
+Cuando corresponda, genera:
+
+- WebP;
+- AVIF;
+- tamaños responsive.
+
+Conserva los originales.
+
+Utiliza:
+
+srcset
+sizes
+width
+height
+
+Evita layout shift.
+
+# MOBILE FIRST
+
+Diseña pensando primero en teléfono.
+
+Prueba aproximadamente desde 320px en adelante.
+
+Revisa:
+
+- menú;
+- hero;
+- botones;
+- filtros;
+- fotografías;
+- galerías;
+- formularios;
+- proyectos;
+- footer;
+- tipografía;
+- spacing;
+- animaciones.
+
+Las galerías y proyectos deben sentirse especialmente bien en touch.
+
+# CONVERSIÓN
+
+La nueva web no debe solamente verse bien.
+
+Debe generar oportunidades de negocio.
+
+Integra CTAs de manera contextual.
+
+Ejemplos:
+
+- Ver proyectos
+- Explorar construcciones
+- Cotizar proyecto
+- Hablar sobre mi proyecto
+- Ver proyectos similares
+- Conocer el sistema constructivo
+
+Evita repetir el mismo CTA diez veces sin contexto.
+
+# CONTACTO
+
+Crear una experiencia de contacto sencilla.
+
+Campos potenciales:
+
+- Nombre;
+- Teléfono;
+- Correo;
+- Tipo de proyecto;
+- Ubicación;
+- Mensaje.
+
+Utiliza únicamente datos de contacto verificados.
+
+Si encuentras WhatsApp dentro del proyecto, úsalo.
+
+Si no existe, NO inventes uno.
+
+Si no existe backend de formularios, no simules un envío funcional.
+
+Prepara claramente la integración futura.
+
+# ACCESIBILIDAD
+
+Implementa:
+
+- keyboard navigation;
+- focus visible;
+- contrast;
+- labels;
+- semantic buttons;
+- semantic links;
+- headings;
+- landmarks;
+- skip links cuando correspondan;
+- alt text;
+- prefers-reduced-motion.
+
+La estética no puede depender de sacrificar accesibilidad.
+
+# NO INVENTAR INFORMACIÓN
+
+Está prohibido inventar:
+
+- clientes;
+- testimonios;
+- premios;
+- certificaciones;
+- estadísticas;
+- proyectos;
+- fotografías;
+- precios;
+- descuentos;
+- promociones;
+- garantías;
+- ubicaciones;
+- teléfonos;
+- correos;
+- WhatsApp;
+- años de experiencia;
+- características técnicas.
+
+Si falta información, utiliza una estructura preparada para contenido futuro,
+pero no fabriques datos.
+
+# CÓDIGO
+
+El código debe ser:
+
+- limpio;
+- mantenible;
+- modular;
+- reusable;
+- consistente;
+- semántico;
+- documentado cuando sea necesario.
+
+No dejes código antiguo innecesario después de la migración.
+
+No mantengas artefactos de HTTrack en el producto final salvo que sean
+necesarios como referencia durante la migración.
+
+# COMPONENTES
+
+Crea un sistema de componentes reutilizables cuando la tecnología elegida lo
+permita.
+
+Ejemplos:
+
+- Header
+- Navigation
+- Hero
+- SectionHeading
+- ProjectCard
+- ProjectGallery
+- ProjectGrid
+- ProjectFilter
+- ServicePreview
+- CTASection
+- Breadcrumbs
+- ContactForm
+- Footer
+
+Evita overengineering.
+
+# FASES DE TRABAJO
+
+Trabaja en este orden.
+
+## FASE 1 — AUDITORÍA
+
+Analiza todo el repositorio.
+
+## FASE 2 — ESTRATEGIA
+
+Define:
+
+- tecnología;
+- arquitectura;
+- rutas;
+- identidad visual;
+- design system;
+- estrategia de proyectos;
+- estrategia SEO;
+- estrategia de animación;
+- estrategia responsive.
+
+## FASE 3 — MIGRACIÓN
+
+Convierte el sitio antiguo a la nueva arquitectura.
+
+Preserva contenido y fotografías.
+
+## FASE 4 — IMPLEMENTACIÓN
+
+Implementa todas las páginas necesarias.
+
+No solamente la home.
+
+## FASE 5 — SEO
+
+Implementa SEO técnico, URLs, metadata, sitemap, structured data y redirects.
+
+## FASE 6 — PERFORMANCE
+
+Optimiza imágenes, scripts y rendering.
+
+## FASE 7 — QA
+
+Prueba todo.
+
+# QA OBLIGATORIO
+
+Antes de terminar:
+
+- ejecuta el build;
+- corrige errores;
+- comprueba páginas;
+- comprueba rutas;
+- comprueba imágenes;
+- comprueba enlaces;
+- comprueba filtros;
+- comprueba proyectos;
+- comprueba galería;
+- comprueba responsive;
+- comprueba navegación móvil;
+- comprueba animaciones;
+- comprueba prefers-reduced-motion;
+- comprueba metadata;
+- comprueba sitemap;
+- comprueba robots.txt;
+- comprueba structured data;
+- comprueba canonical;
+- comprueba consola;
+- revisa accesibilidad básica;
+- revisa performance;
+- busca URLs antiguas que necesiten redirect.
+
+# ENTREGA FINAL
+
+Cuando termines, proporciona:
+
+1. resumen de lo que construiste;
+2. tecnología elegida;
+3. razones de la decisión;
+4. arquitectura;
+5. páginas creadas;
+6. cantidad de proyectos migrados;
+7. identidad visual encontrada;
+8. sistema visual creado;
+9. estrategia de animaciones;
+10. estrategia SEO;
+11. mapa de redirects;
+12. optimizaciones de performance;
+13. cómo ejecutar localmente;
+14. cómo generar build;
+15. cómo desplegar;
+16. variables de entorno;
+17. funcionalidades que requieren backend;
+18. recomendaciones futuras.
+
+# DEFINICIÓN DE ÉXITO
+
+El resultado NO debe ser:
+
+- un mockup;
+- una landing genérica;
+- una copia de Concorda;
+- una copia de DISA;
+- una plantilla;
+- una demo con contenido inventado;
+- una colección de cards genéricas.
+
+Debe ser una reconstrucción funcional y moderna del sitio real de CONSTRUPRE.
+
+La nueva web debe conservar la identidad y experiencia acumulada de la empresa,
+pero elevar radicalmente:
+
+- diseño;
+- tecnología;
+- arquitectura;
+- presentación;
+- fotografía;
+- proyectos;
+- interacción;
+- SEO;
+- rendimiento;
+- experiencia móvil;
+- accesibilidad;
+- percepción de calidad;
+- conversión.
+
+Al navegar el resultado quiero sentir que CONSTRUPRE sigue siendo CONSTRUPRE,
+pero que su presencia digital pasó de una web antigua a una plataforma moderna
+de arquitectura y construcción.
+
+Los proyectos reales deben ser uno de los principales factores de impacto y
+diferenciación del sitio.
+
+Usa Concorda y DISA para entender el NIVEL de diseño esperado.
+
+Usa el repositorio original de CONSTRUPRE para decidir la IDENTIDAD del diseño.</code></pre>
+            </article>
+        </section>
+
+        <footer>Guía 1 - Reto IA - 2026</footer>
+    </main>
+</body>
+</html>
