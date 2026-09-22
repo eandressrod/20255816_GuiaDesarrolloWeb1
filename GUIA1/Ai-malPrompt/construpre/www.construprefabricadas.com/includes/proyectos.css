@@ -59,20 +59,7 @@
 #categorias #over a, #categorias a:hover{
 	background:#F5AA00;
 }
-@media only screen and (max-width: 600px) {
-	#categorias ul{
-		text-align:center;
-		padding:0 0 30px 0;
-	}
-	#categorias li{
-		display:inline;
-		margin-bottom:4px;
-	}
-	#categorias a:link, #categorias a:visited{
-		display:inline-block;
-		
-	}
-}
+
 
 .proyecto{
 	margin:0 0px 40px 0px;

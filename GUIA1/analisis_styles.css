@@ -68,16 +68,3 @@ td {
 tbody tr:nth-child(even) {
     background-color: #202020;
 }
-
-@media (max-width: 650px) {
-    main {
-        width: 94%;
-        margin: 25px auto;
-    }
-
-    th,
-    td {
-        padding: 11px;
-        font-size: 0.88rem;
-    }
-}

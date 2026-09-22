@@ -18,7 +18,7 @@
 }
 #anim #slider{
 	position:relative;
-	min-width:650px; min-height:410px; 
+	min-width:650px; min-height:410px;
 	margin:0; padding:0;
 	list-style:none;
 	background:#E55A45;
@@ -55,10 +55,10 @@
 	width:100%;
 	position:relative;
 	margin:10px 0;
-	
+
 }
 #tipos ul{
-	margin:0; padding:0; 
+	margin:0; padding:0;
 	list-style:none;
 	text-align:center;
 }
@@ -75,7 +75,7 @@
 	background:#E49442;
 	text-align:center;
 	color:#fff; font-size:12px;
-	
+
 	padding:20px 0;
 	text-decoration:none;
 	text-transform:uppercase;
@@ -92,7 +92,7 @@
 	background:#E49442;
 	text-align:center;
 	color:#fff;
-	
+
 	padding:20px 20px;
 	text-decoration:none;
 	text-transform:uppercase;
@@ -101,7 +101,7 @@
 .tipos a:hover{
 	background:#E55A45;
 }
-/* 	video de la derecha 
+/* 	video de la derecha
 	para mostrar que
 	el link del video de construcción
 */
@@ -135,7 +135,7 @@
 .video-image #play{
 	position:absolute; top:84px; left:85px;
 	width:80px;
-	
+
 }
 .video-image #play a:link, .video-image #play a:visited{
 	display:block;
@@ -152,7 +152,7 @@
 	background:rgba(0,187,230,1) /* #00BBE6;*/
 }
 .video-image #play a img{
-	
+
 }
 /* for the full video */
 #boxVideo{
@@ -233,25 +233,25 @@
 	display:none;
 	font-weight:normal;
 	position:absolute; font-size:14px;
-	bottom:-60px; margin:0; 
+	bottom:-60px; margin:0;
 	width:100%; padding:10px 0;
 	/* background:rgba(0,0,0,0.3); */
 	background-image:
     linear-gradient(
-      to bottom, 
+      to bottom,
       rgba(0,0,0,0), rgba(0,0,0,0.7)
     );
-	
-	transition: all 0.4s;   
-	-moz-transition: all 0.4s; 
+
+	transition: all 0.4s;
+	-moz-transition: all 0.4s;
 	-webkit-transition: all 0.4s;
-	
+
 }
 .h-proyectos li a:link, .h-proyectos li a:visited{
 	text-decoration:none; font-weight:normal;
 	text-transform:uppercase;
 	color:#fff;
-	
+
 }
 .h-proyectos li .imagen{
 	width:100%; height:100%;
@@ -276,14 +276,4 @@
 	display:block;
 	bottom:0px;
 	background:#E55A45;
-}
-
-@media only screen and (max-width: 600px) {
-	.blocked{
-		border-radius:0;
-	}
-	/* ocultar la imagen para proyectos */
-	.h-proyectos #imagen-ppal{
-		display:none;
-	}
 }
