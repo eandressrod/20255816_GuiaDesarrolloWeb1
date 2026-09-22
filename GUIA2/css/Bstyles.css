@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root {
+    --color-fondo: #000000;
+
+    --color-rojo: #8c162c;
+    --color-rojo-claro: #a1264d;
+
+    --color-texto: #f2f2f2;
+    --color-texto-tenue: #b5b5b5;
+
+    --color-borde: rgba(255, 255, 255, 0.15);
+
+    --fuente-titulos: "EB Garamond", Georgia, serif;
+    --fuente-texto: "EB Garamond", Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+
+    font-family: var(--fuente-texto);
+}
+
+#hero {
+    position: relative;
+
+    min-height: 720px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 50px 20px;
+}
+
+#hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100vh;
+    height: 100vw;
+
+    background-image: url("../img/Bhero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translate(-50%, -50%) rotate(90deg);
+
+    z-index: 0;
+}
+
+#lado-izquierdo,
+#lado-derecho {
+    display: none;
+}
+
+#hero-centro {
+    position: relative;
+    z-index: 1;
+
+    width: 60%;
+    max-width: 900px;
+    min-height: 560px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px 40px;
+
+    background-color: #000000;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+}
+
+#foto-principal {
+    width: 230px;
+    height: auto;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+}
+
+#titulo-principal {
+    max-width: 650px;
+
+    margin: 20px 0 0;
+
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1;
+
+    text-align: center;
+}
+
+#navegacion {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+    padding-top: 18px;
+
+    border-top: 1px solid var(--color-borde);
+}
+
+#navegacion a {
+    padding: 8px 13px;
+
+    color: var(--color-texto-tenue);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+}
+
+#navegacion a:hover {
+    color: var(--color-texto);
+
+    border-color: var(--color-rojo-claro);
+
+    background-color: var(--color-rojo);
+}
+
+#zona-contenido {
+    padding: 90px 0;
+
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: repeat-y;
+}
+
+#contenido {
+    width: 94%;
+    max-width: 1350px;
+
+    margin: 0 auto;
+
+    padding: 25px 65px 60px;
+
+    background-color: #000000;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+}
+
+section {
+    padding: 65px 0;
+
+    border-bottom: 1px solid var(--color-borde);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+section h2 {
+    margin: 0 0 25px;
+
+    color: var(--color-rojo-claro);
+
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.fila {
+    display: flex;
+
+    align-items: center;
+
+    gap: 55px;
+
+    padding: 45px 0;
+
+    border-top: 1px solid var(--color-borde);
+}
+
+.fila.invertida {
+    flex-direction: row-reverse;
+}
+
+.fila p {
+    flex: 1;
+
+    margin: 0;
+
+    color: var(--color-texto-tenue);
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    text-align: left;
+}
+
+.fila img {
+    width: 42%;
+    height: auto;
+
+    max-height: 480px;
+
+    object-fit: contain;
+
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+}
+
+#p1 {
+    width: 44%;
+}
+
+#p2 {
+    width: 38%;
+}
+
+#p3 {
+    width: 44%;
+}
+
+#p4 {
+    width: 30%;
+    max-height: 520px;
+}
+
+#p5 {
+    width: 44%;
+}
+
+#p6 {
+    width: 44%;
+}
+
+#p7 {
+    width: 44%;
+}
+
+#p8 {
+    width: 44%;
+}
+
+#p9 {
+    width: 44%;
+}
+
+#p10 {
+    width: 42%;
+}
+
+#p11 {
+    width: 30%;
+    max-height: 520px;
+}
+
+#personas {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background-color: #000000;
+
+    border-top: 1px solid var(--color-borde);
+}
+
+#personas h2 {
+    margin: 0 0 15px;
+
+    color: var(--color-rojo-claro);
+
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#personas p {
+    margin: 0;
+
+    color: var(--color-texto-tenue);
+
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+
+#p10 {
+    width: 32%;
+    max-height: 620px;
+
+    object-fit: contain;
+}

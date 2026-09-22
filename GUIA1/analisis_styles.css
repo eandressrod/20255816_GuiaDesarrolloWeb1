@@ -15,6 +15,17 @@ main {
     margin: 45px auto;
 }
 
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #d5d5d5;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 h1 {
     margin-bottom: 8px;
     font-size: 2rem;
@@ -25,6 +36,10 @@ p {
     color: #aaaaaa;
 }
 
+.table-scroll {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -33,6 +48,7 @@ table {
 
 th,
 td {
+    width: 50%;
     padding: 16px;
     border: 1px solid #363636;
     text-align: left;
@@ -41,12 +57,16 @@ td {
 }
 
 th {
-    background-color: #ffffff;
-    color: #111111;
+    background-color: #292929;
+    color: #ffffff;
 }
 
 td {
     color: #d5d5d5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #202020;
 }
 
 @media (max-width: 650px) {
