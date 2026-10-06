@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt y evidencias | Reto IA de la Guía 3</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <main>
+        <header class="site-header">
+            <p class="eyebrow">Guía 03 · Reto IA · Claude</p>
+            <h1>Prompt y evidencias</h1>
+            <p>Nueva página de inicio de CONSTRUPRE con CSS Grid.</p>
+        </header>
+        <nav class="extra-links" aria-label="Navegación del reto IA">
+            <a href="../index.html#guia-3">← Volver al hub</a>
+            <a href="reto-ia/index.html">Abrir página final ↗</a>
+        </nav>
+        <article class="prompt-document">
+            <h2>Cómo se utiliza CSS Grid</h2>
+            <p><code>main.layout-principal</code> es el contenedor. Sus seis hijos directos son apertura, empresa, sistema constructivo, proyectos, servicios y contacto.</p>
+            <p>En escritorio, <code>repeat(12, minmax(0, 1fr))</code> define doce columnas. Empresa ocupa ocho y sistema constructivo cuatro; las otras secciones ocupan todo el ancho. Las filas se generan automáticamente según el contenido.</p>
+            <p><code>column-gap</code> usa <code>--separacion-grid: 32px</code>. El espacio vertical depende de <code>row-gap</code>. A partir del diseño móvil, la retícula pasa a una columna y se restablecen las ubicaciones de los hijos.</p>
+            <p>Para la demostración en escritorio, cambiar temporalmente <code>--separacion-grid</code> a <code>80px</code> aumenta la separación entre empresa y sistema constructivo. El valor final se conserva en 32 px.</p>
+        </article>
+        <article class="prompt-document">
+            <h2>Revisión y cambios</h2>
+            <p>Se separaron el HTML y el CSS del mensaje de Claude en sus archivos correspondientes. Se incorporaron Servicios y Contacto a la carpeta del reto de GUIA3, tomando como base las páginas de GUIA2. Se corrigieron los enlaces del inicio para que las tres páginas naveguen entre sí y regresen al nuevo inicio. Se conservan los recursos visuales existentes y la respuesta original de Claude.</p>
+        </article>
+        <article class="prompt-document">
+            <h2>Prompt completo enviado a Claude</h2>
+            <pre>Actúa como diseñador y desarrollador frontend especializado en sitios de arquitectura y construcción. Necesito que generes una nueva página de inicio para CONSTRUPRE con HTML semántico y CSS Grid. Este trabajo corresponde al reto IA de la Guía 3 de Desarrollo Web I.
+
+En la Guía 1 se utilizó Codex y en la Guía 2, Gemini. Ahora utilizo Claude. El resultado debe conservar la temática, el contenido esencial, la navegación y la identidad visual de CONSTRUPRE, pero debe mostrar una nueva composición construida principalmente con CSS Grid.
+
+Lee todo este contexto antes de generar el código. El mensaje contiene los datos, las rutas y las reglas que necesitas; no necesitas acceder a mi computadora, leer un AGENTS.md ni reconstruir el repositorio.
+
+## 1. Alcance exacto
+
+Genera únicamente estos dos archivos completos:
+
+1. `index.html`: la nueva página de inicio.
+2. `styles.css`: su hoja de estilos externa.
+
+Ambos se colocarán en `GUIA3/reto-ia/` dentro de un repositorio estático de guías. La página debe funcionar tanto con un servidor local sencillo como en GitHub Pages, incluso cuando el repositorio se sirve desde una subcarpeta.
+
+No generes otras páginas, archivos de configuración, scripts, documentación, imágenes ni sistemas de compilación. No uses frameworks, Tailwind, bibliotecas, JavaScript, CDNs ni fuentes remotas. No publiques ni despliegues el resultado.
+
+El objetivo es una página funcional y visualmente cuidada, con código que un estudiante pueda leer y explicar. No quiero un boceto ni una colección de fragmentos.
+
+## 2. Contexto real de la empresa
+
+CONSTRUPRE significa Construcciones Prefabricadas. Es una empresa 100% salvadoreña dedicada al diseño, fabricación y construcción de proyectos prefabricados. Trabaja con proyectos personalizados según las necesidades, ideas y objetivos del cliente.
+
+Su público incluye personas que tienen un terreno y desean construir, familias que evalúan casas prefabricadas, personas que necesitan tapiales o cerramientos, y clientes que buscan ranchos o espacios recreativos. También existen proyectos con usos comerciales.
+
+La página debe permitir entender rápidamente:
+
+- Qué hace CONSTRUPRE.
+- Qué tipos de construcciones ofrece.
+- Qué obras reales pueden observarse.
+- Qué caracteriza su sistema prefabricado.
+- Cómo consultar servicios o contactar a la empresa.
+
+Los servicios publicados en la copia del sitio original incluyen tapiales, casas básicas, casas con acabados, ranchos y piscinas. Puedes mencionarlos sin inventar prestaciones ni mostrar fotografías como si representaran servicios que no aparecen en ellas.
+
+Datos comprobados en la copia local del sitio original:
+
+- La empresa publica la expresión «Más de 24 años de experiencia». Si la utilizas, conserva esa expresión; no la actualices haciendo cálculos con el año actual.
+- El texto original describe concreto de alta resistencia de **210 kg/cm²** y refuerzo con **varillas de hierro grado 70**. Puedes incluir estos dos datos en un bloque breve del sistema constructivo, sin deducir certificaciones o garantías.
+- Oficina: 15 Av. Sur, Blok «D» No. 14, Residencial Bethania, Santa Tecla, La Libertad, El Salvador.
+- Planta: Km. 29 Carretera a Sonsonate, Lotificación El Edén, Lourdes Colón, La Libertad, El Salvador.
+- Teléfono de oficina: **(503) 2228-0022**.
+
+En el inicio basta con mostrar Santa Tecla, El Salvador, y el teléfono. No necesitas saturar el pie con ambas direcciones.
+
+Estos datos proceden del contenido conservado del sitio; no implican una comprobación actual de la operación comercial. No afirmes que has investigado información vigente.
+
+Escribe en español natural y profesional. Usa frases concretas. Evita eslóganes genéricos como «redefiniendo el futuro», «innovación que transforma» o «la mejor empresa».
+
+No inventes precios, promociones, plazos, garantías, certificaciones, premios, clientes, testimonios, cantidades de proyectos, superficies, ubicaciones adicionales, correos, WhatsApp ni funciones de backend. No prometas que un formulario envía mensajes. Esta página de inicio no necesita formulario.
+
+## 3. Identidad visual que debes conservar
+
+Las páginas de Servicios y Contacto de la Guía 2 seguirán existiendo. La nueva página debe sentirse parte de ese mismo sitio. Su estilo es una galería arquitectónica cálida: fotografías grandes, fondos crema, pausas oscuras, tipografía sobria y enlaces discretos.
+
+Usa esta paleta mediante variables CSS:
+
+```css
+:root {
+  --color-warm-parchment: #ffebd0;
+  --color-candlelight: #fff8e9;
+  --color-obsidian: #000000;
+  --color-walnut-shell: #2f2116;
+  --color-aged-bronze: #4f3622;
+  --color-amber-glow: #fee197;
+  --color-muted-gold: #987f61;
+}
+```
+
+Reglas visuales:
+
+- Crema como superficie principal; nogal para secciones oscuras y pie; negro para texto sobre crema. Usa ámbar y oro apagado como acentos discretos.
+- Una sola familia sans disponible en el sistema: `system-ui, -apple-system, &quot;Segoe UI&quot;, Arial, sans-serif`.
+- Pesos 400 y 500. Escala de referencia: 16, 18, 20, 24, 28 y 40 px. Puedes usar `clamp()` para adaptar el titular, sin superar 40 px.
+- Contenido editorial de aproximadamente 1200 px de ancho máximo, con márgenes cómodos y espacio entre secciones de unos 100 px en escritorio, reducido en móvil.
+- Fotos rectangulares, sin esquinas redondeadas, sombras ni filtros decorativos. Preserva sus proporciones; usa `object-fit: cover` cuando un recorte sea necesario.
+- Botones sobrios y transparentes, borde de 1 px y radio de 8 px. Enlaces con subrayado o borde inferior reconocible.
+- Sobre fotografías, garantiza la legibilidad con un pequeño bloque sólido de la paleta cuando haga falta. No uses degradados ni oscurezcas toda la foto para ocultar problemas de contraste.
+- La fotografía debe llevar el peso visual. Evita una plantilla de marketing con tarjetas pequeñas repetidas, estadísticas inventadas, glassmorphism, neón o adornos propios de una aplicación tecnológica.
+
+La composición puede cambiar respecto al inicio anterior. Mantén el carácter editorial y la identidad de las páginas existentes.
+
+## 4. Recursos reales y rutas exactas
+
+Estas imágenes ya existen en el repositorio. Debes reutilizarlas, sin generar ni descargar imágenes nuevas. Desde `GUIA3/reto-ia/index.html`, sus rutas son:
+
+| Recurso | Ruta | Dimensiones originales |
+| --- | --- | --- |
+| Logotipo de CONSTRUPRE | `../../GUIA2/reto-ia/assets/logo.png` | 210 × 110 px |
+| Obra identificada como Berlín | `../../GUIA2/reto-ia/assets/obra-berlin.jpg` | 700 × 525 px |
+| Rancho-restaurante | `../../GUIA2/reto-ia/assets/rancho.jpg` | 700 × 525 px |
+| Tapial en Santa Elena | `../../GUIA2/reto-ia/assets/tapial.jpg` | 640 × 480 px |
+
+Usa el logotipo real sin deformarlo. Los nombres y pies de foto deben ser prudentes: «Obra en Berlín», «Rancho-restaurante» y «Tapial en Santa Elena» son suficientes. No inventes superficie, fecha, cliente o especificaciones de esas obras.
+
+Incluye atributos `width` y `height` en las imágenes y `alt` descriptivo. Las fotos debajo del primer bloque pueden usar `loading=&quot;lazy&quot;`. La foto principal debe cargar normalmente. No uses imágenes externas ni rutas que comiencen con `/`.
+
+Aunque no puedas visualizar estos recursos en este chat, usa las rutas exactas. Se resolverán al colocar los archivos en el repositorio. No cambies las rutas por imágenes de muestra.
+
+## 5. Navegación y contenido
+
+La navegación compartida debe conservar estos tres destinos:
+
+- **Inicio:** `index.html`, con `aria-current=&quot;page&quot;`.
+- **Servicios:** `../../GUIA2/reto-ia/servicios.html`.
+- **Contacto:** `../../GUIA2/reto-ia/contacto.html`.
+
+Los botones para cotizar o hablar del proyecto deben apuntar a la página de Contacto. El teléfono debe usar `tel:+50322280022`.
+
+Puedes incluir «Ver proyectos» como enlace interno a `#proyectos`, siempre que exista ese identificador en la página. No inventes páginas nuevas ni enlaces con `href=&quot;#&quot;`.
+
+Construye este recorrido de contenido:
+
+1. Encabezado con logotipo y navegación Inicio / Servicios / Contacto.
+2. Apertura con una fotografía real grande, un único `h1`, una propuesta clara sobre construcción prefabricada en El Salvador y una llamada a explorar los proyectos.
+3. Presentación de la empresa y un bloque complementario del sistema constructivo. Estos dos bloques deben formar parte de la distribución principal con Grid, compartiendo una fila en escritorio y apilándose en móvil.
+4. Proyectos reales con fotografías grandes y pies breves. Puedes variar sus anchos para lograr una composición editorial legible; no conviertas todas las fotos en tarjetas iguales.
+5. Presentación breve de los servicios, con enlace a la página existente.
+6. Llamada sobria a contactar para conversar sobre un proyecto.
+7. Pie oscuro con la marca, Santa Tecla y el teléfono.
+
+Evita repetir la misma información en demasiadas secciones. No añadas mensajes sobre la asignatura, el modelo de IA o detalles técnicos al contenido visible del sitio comercial.
+
+## 6. CSS Grid obligatorio en la distribución principal
+
+Este es el requisito más importante del trabajo. No basta con usar Grid en la galería o en un grupo de tarjetas.
+
+Usa un `main` con la clase **`layout-principal`** como contenedor Grid de la composición principal. Sus hijos directos deben incluir los bloques importantes del inicio: apertura, presentación de la empresa, sistema constructivo, proyectos, servicios y llamada a contacto.
+
+En escritorio, usa una retícula de 12 columnas con `repeat(12, minmax(0, 1fr))`. Distribuye intencionalmente los bloques mediante `grid-column`: algunos ocuparán las 12 columnas y la presentación y el sistema constructivo compartirán una fila, por ejemplo con 8 y 4 columnas. La distribución principal debe depender de estas reglas, no únicamente de contenedores Flexbox dentro de secciones apiladas.
+
+Puedes anidar otros contenedores Grid para las fotografías o usar Flexbox dentro de la navegación y los botones. No uses `position: absolute` como sustituto de la distribución principal.
+
+Define `--separacion-grid: 32px` y úsala en el `column-gap` de `.layout-principal`. Mantén el espaciado vertical de secciones con `row-gap` u otra regla clara. Al cambiar temporalmente `--separacion-grid` a `80px` en escritorio, debe verse una mayor separación entre los dos bloques que comparten fila. Esta modificación debe ser fácil de explicar y observar en un video.
+
+En móvil, cambia la retícula principal a una columna y restablece los `grid-column` de los hijos para que ninguno cree columnas implícitas. Conserva el orden lógico del HTML. Evita el desplazamiento horizontal a partir de 320 px.
+
+Utiliza alturas basadas en contenido y filas automáticas. No fijes alturas que corten textos. Explica mediante comentarios CSS breves dónde están el Grid principal, sus ubicaciones y su adaptación móvil.
+
+## 7. Calidad y accesibilidad
+
+- `&lt;!DOCTYPE html&gt;`, `lang=&quot;es&quot;`, UTF-8, viewport, título y descripción propios de CONSTRUPRE.
+- Un solo `h1`; encabezados coherentes; `header`, `nav`, `main`, `section`, `figure`, `figcaption` y `footer` según corresponda.
+- El HTML enlaza `styles.css`. Todo el CSS está en ese archivo, sin estilos inline ni etiquetas `style`.
+- Navegación funcional en escritorio y móvil sin requerir JavaScript.
+- Contraste legible y estados `:focus-visible` para teclado.
+- Orden del documento que coincida con la lectura visual. Evita `order` para alterar ese orden.
+- Imágenes, textos y botones adaptables, sin desbordamientos.
+- Si incorporas transiciones, que sean discretas y respeten `prefers-reduced-motion: reduce`.
+- No uses contenido oculto que dependa de JavaScript para aparecer.
+- No inventes una URL de publicación ni metas canonical que no puedas justificar.
+
+Antes de responder, revisa de forma razonada la consistencia de selectores, las rutas, los identificadores, la separación HTML/CSS y el uso de Grid en el contenedor principal. No digas que ejecutaste pruebas o abriste mi repositorio si no lo hiciste.
+
+## 8. Formato de entrega
+
+Devuelve todo en un solo mensaje, en este orden:
+
+1. El encabezado `index.html` seguido de un bloque `html` con el archivo completo.
+2. El encabezado `styles.css` seguido de un bloque `css` con el archivo completo.
+3. Una explicación breve, de máximo seis puntos, identificando el contenedor Grid principal, sus hijos directos, la definición de columnas, la ubicación de los bloques, las separaciones y la adaptación móvil. Incluye qué se espera observar al cambiar `--separacion-grid` de `32px` a `80px` en escritorio.
+
+No omitas código, no uses puntos suspensivos ni dividas la entrega en varias respuestas. No incluyas un tercer archivo. Necesito conservar este resultado original antes de hacer correcciones y preparar la versión final del reto.
+</pre>
+        </article>
+        <footer>Guía 3 · Desarrollo Web · 2026</footer>
+    </main>
+</body>
+</html>
