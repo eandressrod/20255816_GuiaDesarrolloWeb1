@@ -21,10 +21,12 @@ function generarNumeroAleatorio() {
         parrafo.textContent = `Adivinaste el número: ${numeroAleatorio}. Recarga la página para volver a jugar.`;
         boton.disabled = true;
     } else if (intentos === numeroIntentos) {
-        parrafo.textContent = `Se terminaron los intentos. El número era ${numeroAleatorio}. Recarga la página para volver a jugar.`;
+        const pista = numero < numeroAleatorio ? "más alto" : "más bajo";
+        parrafo.textContent = `El número buscado es ${pista}. Se terminaron los intentos. El número era ${numeroAleatorio}. Recarga la página para volver a jugar.`;
         boton.disabled = true;
     } else {
-        parrafo.textContent = `Vuelve a intentar. Quedan ${numeroIntentos - intentos} intentos.`;
+        const pista = numero < numeroAleatorio ? "más alto" : "más bajo";
+        parrafo.textContent = `El número buscado es ${pista}. Quedan ${numeroIntentos - intentos} intentos.`;
     }
 }
 
