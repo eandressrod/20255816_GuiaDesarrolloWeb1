@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedidos de cafetería | Guía 5</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/pedidos.css">
+    <script src="../js/pedidos.js" defer></script>
+</head>
+
+<body>
+
+    <header id="hero">
+
+        <div id="hero-centro">
+
+            <p class="eyebrow">Guía 05 · Complementario 2</p>
+
+            <h1 id="titulo-principal">Pedidos de cafetería</h1>
+
+            <p id="subtitulo">
+                Registra los pedidos, revisa el total de unidades y el monto, y filtra los productos por precio.
+            </p>
+
+            <nav id="navegacion" aria-label="Navegación de la Guía 5">
+                <a href="#nuevo-pedido">Nuevo pedido</a>
+                <a href="#pedidos">Pedidos</a>
+                <a href="../index.html">Ejemplos</a>
+                <a href="../../index.html#guia-5">Todas las guías</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <div id="zona-contenido">
+
+        <main id="contenido">
+
+            <section id="nuevo-pedido" aria-labelledby="titulo-nuevo">
+
+                <h2 id="titulo-nuevo">Nuevo pedido</h2>
+
+                <form id="formPedido" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="producto" class="form-label">Producto</label>
+                            <input type="text" id="producto" name="producto" class="form-control" placeholder="Café americano" required>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <label for="precio" class="form-label">Precio unitario ($)</label>
+                            <input type="number" id="precio" name="precio" class="form-control" min="0.01" step="any" placeholder="2.50" required>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <label for="cantidad" class="form-label">Cantidad</label>
+                            <input type="number" id="cantidad" name="cantidad" class="form-control" min="1" step="1" placeholder="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4">Agregar pedido</button>
+                </form>
+
+            </section>
+
+
+            <section id="pedidos" aria-labelledby="titulo-pedidos">
+
+                <h2 id="titulo-pedidos">Pedidos</h2>
+
+                <div class="row g-2 align-items-end mb-4">
+                    <div class="col-sm-4">
+                        <label for="precioMaximo" class="form-label">Precio máximo ($)</label>
+                        <input type="number" id="precioMaximo" class="form-control" min="0" step="any">
+                    </div>
+                    <div class="col-sm-auto d-flex flex-wrap gap-2">
+                        <button type="button" id="btnFiltrar" class="btn btn-primary">Filtrar productos</button>
+                        <button type="button" id="btnMostrar" class="btn btn-outline-secondary">Mostrar todos</button>
+                        <button type="button" id="btnLimpiar" class="btn btn-outline-danger">Limpiar pedidos</button>
+                    </div>
+                </div>
+
+                <p id="mensaje" class="text-danger" role="alert" hidden></p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Precio unitario</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaPedidos"></tbody>
+                    </table>
+                </div>
+
+                <dl class="totales" aria-live="polite">
+                    <div>
+                        <dt>Unidades totales</dt>
+                        <dd id="totalUnidades">0</dd>
+                    </div>
+                    <div>
+                        <dt>Monto total</dt>
+                        <dd id="montoTotal">$0.00</dd>
+                    </div>
+                </dl>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <footer id="pie">
+        <p>Desarrollo Web · Guía 5 · Ejercicio complementario 2</p>
+    </footer>
+
+</body>
+
+</html>

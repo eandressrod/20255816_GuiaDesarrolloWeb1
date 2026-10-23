@@ -16,17 +16,20 @@ function generarNumeroAleatorio() {
       "¿Que número se ha generado (Intento " + intentos + ")?"
     );
 
+    //indicamos si el numero oculto es mas alto o mas bajo que el ingresado
+    let pista = numero < numeroAleatorio ? "más alto" : "más bajo";
+
     //verificamos el numero aleatorio con el ingresado por el usuario
     if (numero == numeroAleatorio) {
       mensaje = `¡Es sorprente, pudiste adivinar el numero oculto (${numeroAleatorio}).
         Refresque la página para volver a jugar.`;
     } else if (intentos == numeroIntentos) {
-      mensaje = `Su numero de intentos ha terminado.
+      mensaje = `El numero que buscas es ${pista} que ${numero}.
+          Su numero de intentos ha terminado.
           El numero oculto era: ${numeroAleatorio}. Refresque la página para volver a jugar.`;
     } else {
-      mensaje = `Vuelve a intentar. Quedan ${
-        numeroIntentos - intentos
-      } intentos`;
+      mensaje = `El numero que buscas es ${pista} que ${numero}.
+        Vuelve a intentar. Quedan ${numeroIntentos - intentos} intentos`;
     }
 
     //aumentamos el valor de los intentos
