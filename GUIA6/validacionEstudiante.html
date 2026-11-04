@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Validación estudiantil | Guía 6</title>
+    <link rel="icon" href="img/js.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesFunciones.css">
+    <script src="js/validacionEstudiante.js" defer></script>
+</head>
+<body>
+    <main class="app-shell d-flex flex-column flex-md-row">
+        <aside class="nav-bar p-3 text-bg-dark">
+            <a class="d-flex align-items-center mb-3 text-white text-decoration-none" href="indexFunciones.html">
+                <img src="img/js.png" alt="" width="32" height="32" class="me-2">
+                <span class="fs-4">JavaScript</span>
+            </a>
+            <hr>
+            <nav class="nav nav-pills flex-column gap-1" aria-label="Ejercicios de funciones">
+                <a class="nav-link" href="indexFunciones.html">Funciones</a>
+                <a class="nav-link" href="recursividad.html">Recursividad</a>
+                <a class="nav-link" href="tabla.html">Crear una tabla</a>
+                <a class="nav-link" href="formulario.html">Expediente médico</a>
+                <a class="nav-link active" aria-current="page" href="validacionEstudiante.html">Validación estudiantil</a>
+                <a class="nav-link" href="index.html">Estructuras y arreglos</a>
+                <a class="nav-link" href="../index.html#guia-6">Todas las guías</a>
+            </nav>
+        </aside>
+        <div class="colum-container">
+            <section class="lesson-card card shadow-sm">
+                <div class="card-body p-4">
+                    <h1 class="h2">Ficha de estudiante</h1>
+                    <p>Completa los datos para validar sus formatos.</p>
+                    <form id="idFormValidacion" class="row g-3" novalidate>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idCarnet">Carnet</label>
+                            <input class="form-control" id="idCarnet" type="text" placeholder="AB001" required>
+                            <div class="invalid-feedback">Usa dos letras y tres números.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idNombreCompleto">Nombre completo</label>
+                            <input class="form-control" id="idNombreCompleto" type="text" required>
+                            <div class="invalid-feedback">Escribe al menos dos nombres usando solo letras.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idDui">DUI</label>
+                            <input class="form-control" id="idDui" type="text" placeholder="12345678-9" required>
+                            <div class="invalid-feedback">Usa el formato 12345678-9.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idNit">NIT</label>
+                            <input class="form-control" id="idNit" type="text" placeholder="1234-123456-123-1" required>
+                            <div class="invalid-feedback">Usa el formato 1234-123456-123-1.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idFechaNacimiento">Fecha de nacimiento (DD/MM/AAAA)</label>
+                            <input class="form-control" id="idFechaNacimiento" type="text" placeholder="31/12/2000" required>
+                            <div class="invalid-feedback">Escribe una fecha válida como DD/MM/AAAA.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idCorreo">Correo electrónico</label>
+                            <input class="form-control" id="idCorreo" type="text" placeholder="nombre@correo.com" required>
+                            <div class="invalid-feedback">Escribe un correo válido.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idEdad">Edad</label>
+                            <input class="form-control" id="idEdad" type="text" inputmode="numeric" required>
+                            <div class="invalid-feedback">La edad debe contener solo números.</div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Validar ficha</button>
+                        </div>
+                    </form>
+                    <p id="idResultadoValidacion" class="function-result mt-3 mb-0" role="status" aria-live="polite"></p>
+                </div>
+            </section>
+            <footer class="lesson-card site-footer small"><a href="../index.html#guia-6">Volver al índice principal</a></footer>
+        </div>
+    </main>
+</body>
+</html>

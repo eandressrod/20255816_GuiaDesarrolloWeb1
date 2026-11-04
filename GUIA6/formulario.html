@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expediente médico | Guía 6</title>
+    <link rel="icon" href="img/js.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesFunciones.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/formulario.js" defer></script>
+</head>
+<body>
+    <main class="app-shell d-flex flex-column flex-md-row">
+        <aside class="nav-bar p-3 text-bg-dark">
+            <a class="d-flex align-items-center mb-3 text-white text-decoration-none" href="indexFunciones.html">
+                <img src="img/js.png" alt="" width="32" height="32" class="me-2">
+                <span class="fs-4">JavaScript</span>
+            </a>
+            <hr>
+            <nav class="nav nav-pills flex-column gap-1" aria-label="Ejercicios de funciones">
+                <a class="nav-link" href="indexFunciones.html">Funciones</a>
+                <a class="nav-link" href="recursividad.html">Recursividad</a>
+                <a class="nav-link" href="tabla.html">Crear una tabla</a>
+                <a class="nav-link active" aria-current="page" href="formulario.html">Expediente médico</a>
+                <a class="nav-link" href="validacionEstudiante.html">Validación estudiantil</a>
+                <a class="nav-link" href="index.html">Estructuras y arreglos</a>
+                <a class="nav-link" href="../index.html#guia-6">Todas las guías</a>
+            </nav>
+        </aside>
+        <div class="colum-container">
+            <section class="lesson-card card shadow-sm">
+                <div class="card-body p-4">
+                    <h1 class="h2">Expediente médico</h1>
+                    <form id="idForm" class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="idTxtNombre">Nombre del paciente</label>
+                            <input class="form-control" id="idTxtNombre" type="text" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idTxtApellido">Apellido del paciente</label>
+                            <input class="form-control" id="idTxtApellido" type="text" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idTxtFechaNacimiento">Fecha de nacimiento</label>
+                            <input class="form-control" id="idTxtFechaNacimiento" type="date" required>
+                        </div>
+                        <fieldset class="col-md-6">
+                            <legend class="form-label">Sexo</legend>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rdSexo" id="idRdMasculino" value="Hombre" required>
+                                <label class="form-check-label" for="idRdMasculino">Hombre</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="rdSexo" id="idRdFemenino" value="Mujer">
+                                <label class="form-check-label" for="idRdFemenino">Mujer</label>
+                            </div>
+                        </fieldset>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idCmbPais">País</label>
+                            <select class="form-select" id="idCmbPais" required>
+                                <option value="" selected disabled>Seleccione un país</option>
+                                <option>El Salvador</option>
+                                <option>Honduras</option>
+                                <option>Panamá</option>
+                                <option>Costa Rica</option>
+                                <option>Belice</option>
+                                <option>Nicaragua</option>
+                                <option>Chile</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="idTxtDireccion">Dirección</label>
+                            <textarea class="form-control" id="idTxtDireccion" rows="2" required></textarea>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap gap-2">
+                            <button id="idBtnAgregar" class="btn btn-success" type="submit">Guardar datos</button>
+                            <button id="idBtnMostrar" class="btn btn-warning" type="button">Mostrar pacientes</button>
+                            <button id="idBtnLimpiar" class="btn btn-danger" type="button">Limpiar formulario</button>
+                            <button id="idBtnAgregarPais" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#idModal">Nuevo país</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="lesson-card card shadow-sm mt-4">
+                <div class="card-body p-4">
+                    <h2 class="h4">Pacientes registrados</h2>
+                    <div id="idTablaPacientes" class="table-responsive" aria-live="polite">Ninguno</div>
+                </div>
+            </section>
+            <footer class="lesson-card site-footer small"><a href="../index.html#guia-6">Volver al índice principal</a></footer>
+        </div>
+    </main>
+
+    <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalLabel">Agregar país</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="form-label" for="idNombrePais">Nombre del país</label>
+                    <input class="form-control" id="idNombrePais" type="text">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-primary" id="idBtnAddPais" type="button">Agregar país</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+        <div id="idNotificacion" class="toast text-bg-success" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Notificación</strong>
+                <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+            </div>
+            <div id="idMensaje" class="toast-body"></div>
+        </div>
+    </div>
+</body>
+</html>
