@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recursividad | Guía 6</title>
+    <link rel="icon" href="img/js.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesFunciones.css">
+    <script src="js/recursividad.js" defer></script>
+</head>
+<body>
+    <main class="app-shell d-flex flex-column flex-md-row">
+        <aside class="nav-bar p-3 text-bg-dark">
+            <a class="d-flex align-items-center mb-3 text-white text-decoration-none" href="indexFunciones.html">
+                <img src="img/js.png" alt="" width="32" height="32" class="me-2">
+                <span class="fs-4">JavaScript</span>
+            </a>
+            <hr>
+            <nav class="nav nav-pills flex-column gap-1" aria-label="Ejercicios de funciones">
+                <a class="nav-link" href="indexFunciones.html">Funciones</a>
+                <a class="nav-link active" aria-current="page" href="recursividad.html">Recursividad</a>
+                <a class="nav-link" href="tabla.html">Crear una tabla</a>
+                <a class="nav-link" href="index.html">Estructuras y arreglos</a>
+                <a class="nav-link" href="../index.html#guia-6">Todas las guías</a>
+            </nav>
+        </aside>
+        <div class="colum-container">
+            <section class="lesson-card card shadow-sm">
+                <div class="card-body p-4">
+                    <h1 class="h2">Calculando el factorial</h1>
+                    <p>Ingresa un número entero entre 0 y 170.</p>
+                    <form id="idFormFactorial" class="row g-3 align-items-end">
+                        <div class="col-sm-8 col-md-5">
+                            <label class="form-label" for="idTxtNumero">Número</label>
+                            <input id="idTxtNumero" class="form-control" type="text" inputmode="numeric" autocomplete="off" aria-describedby="ayudaFactorial">
+                            <div id="ayudaFactorial" class="form-text">Solo se permiten números enteros.</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <button id="idBtnCalcular" class="btn btn-primary" type="submit">Calcular</button>
+                        </div>
+                    </form>
+                    <p id="idDivResultado" class="function-result fs-4 fw-bold mt-4 mb-0" role="status" aria-live="polite"></p>
+                </div>
+            </section>
+            <footer class="lesson-card site-footer small"><a href="../index.html#guia-6">Volver al índice principal</a></footer>
+        </div>
+    </main>
+</body>
+</html>

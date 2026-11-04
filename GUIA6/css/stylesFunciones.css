@@ -1,0 +1,20 @@
+.function-example {
+    border-left: 4px solid #28a682;
+}
+
+.function-result {
+    min-height: 2rem;
+    overflow-wrap: anywhere;
+}
+
+.function-table th,
+.function-table td {
+    min-width: 6rem;
+    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    .function-example {
+        border-left-width: 3px;
+    }
+}

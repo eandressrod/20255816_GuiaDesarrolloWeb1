@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crear una tabla | Guía 6</title>
+    <link rel="icon" href="img/js.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesFunciones.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/tabla.js" defer></script>
+</head>
+<body>
+    <main class="app-shell d-flex flex-column flex-md-row">
+        <aside class="nav-bar p-3 text-bg-dark">
+            <a class="d-flex align-items-center mb-3 text-white text-decoration-none" href="indexFunciones.html">
+                <img src="img/js.png" alt="" width="32" height="32" class="me-2">
+                <span class="fs-4">JavaScript</span>
+            </a>
+            <hr>
+            <nav class="nav nav-pills flex-column gap-1" aria-label="Ejercicios de funciones">
+                <a class="nav-link" href="indexFunciones.html">Funciones</a>
+                <a class="nav-link" href="recursividad.html">Recursividad</a>
+                <a class="nav-link active" aria-current="page" href="tabla.html">Crear una tabla</a>
+                <a class="nav-link" href="index.html">Estructuras y arreglos</a>
+                <a class="nav-link" href="../index.html#guia-6">Todas las guías</a>
+            </nav>
+        </aside>
+        <div class="colum-container">
+            <section class="lesson-card card shadow-sm">
+                <div class="card-body p-4">
+                    <h1 class="h2">Generando una tabla con funciones</h1>
+                    <p>Elige cuántas filas y columnas tendrá la tabla.</p>
+                    <button class="btn btn-success" id="idBtnNewTable" type="button" data-bs-toggle="modal" data-bs-target="#idModal">Crear tabla</button>
+                    <div id="idDivResultado" class="table-responsive mt-4" aria-live="polite"></div>
+                </div>
+            </section>
+            <footer class="lesson-card site-footer small"><a href="../index.html#guia-6">Volver al índice principal</a></footer>
+        </div>
+    </main>
+
+    <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalLabel">Definición de tabla</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="idNumFila">Número de filas</label>
+                        <input class="form-control" id="idNumFila" type="number" min="1" max="30" value="3">
+                    </div>
+                    <div>
+                        <label class="form-label" for="idNumColumnas">Número de columnas</label>
+                        <input class="form-control" id="idNumColumnas" type="number" min="1" max="20" value="3">
+                    </div>
+                    <p id="idMensajeTabla" class="small text-danger mt-3 mb-0" role="status" aria-live="polite"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-primary" id="idBtnCrearTabla" type="button">Crear tabla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
