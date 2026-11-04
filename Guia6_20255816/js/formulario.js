@@ -21,8 +21,33 @@ const mensaje = document.getElementById("idMensaje");
 //Componente modal
 const idModal = document.getElementById("idModal");
 
+//Clave con la que se guardan los pacientes en LocalStorage
+const clavePacientes = "pacientes";
+
+//Recuperando los pacientes guardados en LocalStorage
+const cargarPacientes = () => {
+  try {
+    const guardados = JSON.parse(localStorage.getItem(clavePacientes));
+    return Array.isArray(guardados) ? guardados : [];
+  } catch (error) {
+    return [];
+  }
+};
+
+//Guardando el arreglo de pacientes en LocalStorage
+const guardarPacientes = () => {
+  try {
+    localStorage.setItem(clavePacientes, JSON.stringify(arrayPaciente));
+  } catch (error) {
+    console.log("No se pudo guardar en LocalStorage");
+  }
+};
+
 //Arreglo global de pacientes
-let arrayPaciente = [];
+let arrayPaciente = cargarPacientes();
+
+//Posicion del paciente que se esta editando (-1 = ninguno)
+let indiceEditar = -1;
 
 /*
 Creando una funcion para que limpie el formulario
@@ -39,6 +64,10 @@ const limpiarForm = () => {
   cmbPais.value = 0;
   inputDireccion.value = "";
   inputNombrePais.value = "";
+
+  //Si se estaba editando un paciente, se cancela la edicion
+  indiceEditar = -1;
+  buttonAgregarPaciente.innerHTML = `<i class="bi bi-person-plus-fill"></i> Guardar Datos`;
 
   inputNombre.focus();
 };
@@ -69,18 +98,34 @@ const addPaciente = function () {
     pais != 0 &&
     direccion != ""
   ) {
-    //Agregando informacion al arreglo paciente
-    arrayPaciente.push(
-      new Array(nombre, apellido, fechaNacimiento, sexo, labelPais, direccion)
+    const paciente = new Array(
+      nombre,
+      apellido,
+      fechaNacimiento,
+      sexo,
+      labelPais,
+      direccion
     );
 
-    //Asignando un mensaje a nuestra notificacion
-    mensaje.innerHTML = "Se ha registrado un nuevo paciente";
+    if (indiceEditar >= 0) {
+      //Actualizando la informacion del paciente que se esta editando
+      arrayPaciente[indiceEditar] = paciente;
+      mensaje.innerHTML = "Se han actualizado los datos del paciente";
+    } else {
+      //Agregando informacion al arreglo paciente
+      arrayPaciente.push(paciente);
+      //Asignando un mensaje a nuestra notificacion
+      mensaje.innerHTML = "Se ha registrado un nuevo paciente";
+    }
+
+    //Guardando los cambios en LocalStorage
+    guardarPacientes();
     //Llamando al componente de Bootstrap
     toast.show();
 
-    //Limpiando formulario
+    //Limpiando formulario y actualizando la tabla
     limpiarForm();
+    imprimirPacientes();
   } else {
     //Asignando un mensaje a nuestra notificacion
     mensaje.innerHTML = "Faltan campos por completar";
@@ -187,5 +232,71 @@ idModal.addEventListener("shown.bs.modal", () => {
   inputNombrePais.focus();
 });
 
+//Carga los datos de un paciente en el formulario para editarlos
+const editarPaciente = (indice) => {
+  const paciente = arrayPaciente[indice];
+
+  inputNombre.value = paciente[0];
+  inputApellido.value = paciente[1];
+  inputFechaNacimiento.value = paciente[2];
+  inputRdMasculino.checked = paciente[3] == "Hombre";
+  inputRdFemenino.checked = paciente[3] == "Mujer";
+
+  //Buscando el pais por su texto; si no existe en el select se agrega
+  let opcionPais = Array.from(cmbPais.options).find(
+    (opcion) => opcion.text == paciente[4]
+  );
+  if (!opcionPais) {
+    opcionPais = document.createElement("option");
+    opcionPais.textContent = paciente[4];
+    opcionPais.value = cmbPais.children.length + 1;
+    cmbPais.appendChild(opcionPais);
+  }
+  cmbPais.value = opcionPais.value;
+  inputDireccion.value = paciente[5];
+
+  indiceEditar = indice;
+  buttonAgregarPaciente.innerHTML = `<i class="bi bi-check2-circle"></i> Guardar cambios`;
+  inputNombre.focus();
+};
+
+//Elimina un paciente del arreglo y de LocalStorage
+const eliminarPaciente = (indice) => {
+  const paciente = arrayPaciente[indice];
+  if (confirm(`¿Desea eliminar al paciente ${paciente[0]} ${paciente[1]}?`)) {
+    arrayPaciente.splice(indice, 1);
+    guardarPacientes();
+
+    //Si se elimina el paciente que se estaba editando, se limpia el formulario
+    if (indiceEditar == indice) {
+      limpiarForm();
+    } else if (indiceEditar > indice) {
+      indiceEditar--;
+    }
+
+    imprimirPacientes();
+    mensaje.innerHTML = "Se ha eliminado el paciente";
+    toast.show();
+  }
+};
+
+//Habilitando los botones Editar y Eliminar de la tabla.
+//Los botones se crean dinamicamente, por eso el evento se agrega al contenedor
+document.getElementById("idTablaPacientes").addEventListener("click", (e) => {
+  const boton = e.target.closest("button");
+  if (!boton) return;
+
+  if (boton.id.startsWith("idBtnEditar")) {
+    editarPaciente(parseInt(boton.id.replace("idBtnEditar", "")) - 1);
+  } else if (boton.id.startsWith("idBtnEliminar")) {
+    eliminarPaciente(parseInt(boton.id.replace("idBtnEliminar", "")) - 1);
+  }
+});
+
 //Ejecutar funcion al momento de cargar la pagina HTML
 limpiarForm();
+
+//Si existen pacientes guardados en LocalStorage se muestran al cargar la pagina
+if (arrayPaciente.length > 0) {
+  imprimirPacientes();
+}

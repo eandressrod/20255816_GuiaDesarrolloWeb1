@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expresiones regulares | Guía 6</title>
+
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="../css/validacion.css">
+    <script src="../js/validacionEstudiante.js" defer></script>
+</head>
+
+<body>
+
+    <header id="hero">
+
+        <div id="hero-centro">
+
+            <p class="eyebrow">Guía 06 · Complementario 3</p>
+
+            <h1 id="titulo-principal">Expresiones regulares en JavaScript</h1>
+
+            <p id="subtitulo">
+                Qué son, cómo se escriben y cómo se usan para validar la ficha de un estudiante.
+            </p>
+
+            <nav id="navegacion" aria-label="Navegación de la Guía 6">
+                <a href="#investigacion">Investigación</a>
+                <a href="#ficha">Ficha</a>
+                <a href="../indexFunciones.html">Funciones</a>
+                <a href="../../index.html#guia-6">Todas las guías</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <div id="zona-contenido">
+
+        <main id="contenido">
+
+            <section id="investigacion" aria-labelledby="titulo-investigacion">
+
+                <h2 id="titulo-investigacion">Investigación</h2>
+
+                <div class="bloque">
+                    <h3>¿Qué es una expresión regular?</h3>
+                    <p>
+                        Una expresión regular es un patrón que describe un conjunto de cadenas de texto.
+                        En JavaScript son objetos de tipo <code>RegExp</code> y sirven para comprobar si un
+                        texto tiene un formato válido, buscar partes de un texto o reemplazarlas.
+                    </p>
+                </div>
+
+                <div class="bloque">
+                    <h3>Formas de crearla</h3>
+                    <p>Existen dos formas equivalentes:</p>
+                    <pre><code>// Literal: el patrón va entre barras
+const carnet = /^[A-Z]{2}\d{3}$/;
+
+// Constructor: útil cuando el patrón se arma a partir de un texto
+const carnet2 = new RegExp("^[A-Z]{2}\\d{3}$");</code></pre>
+                </div>
+
+                <div class="bloque">
+                    <h3>Métodos más utilizados</h3>
+                    <dl class="datos">
+                        <dt><code>regex.test(texto)</code></dt>
+                        <dd>Devuelve <code>true</code> o <code>false</code> si el texto cumple el patrón. Es el que se usa para validar.</dd>
+                        <dt><code>texto.match(regex)</code></dt>
+                        <dd>Devuelve las coincidencias encontradas, o <code>null</code> si no hay ninguna.</dd>
+                        <dt><code>texto.replace(regex, nuevo)</code></dt>
+                        <dd>Reemplaza las partes del texto que coinciden con el patrón.</dd>
+                    </dl>
+                </div>
+
+                <div class="bloque">
+                    <h3>Símbolos básicos</h3>
+                    <table class="simbolos">
+                        <thead>
+                            <tr>
+                                <th scope="col">Símbolo</th>
+                                <th scope="col">Significado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>^</code> y <code>$</code></td><td>Inicio y final del texto. Obligan a que todo el valor cumpla el patrón.</td></tr>
+                            <tr><td><code>\d</code></td><td>Un dígito del 0 al 9.</td></tr>
+                            <tr><td><code>[A-Z]</code></td><td>Un carácter dentro del rango indicado.</td></tr>
+                            <tr><td><code>{n}</code> / <code>{n,m}</code></td><td>Exactamente <em>n</em> repeticiones, o entre <em>n</em> y <em>m</em>.</td></tr>
+                            <tr><td><code>+</code> / <code>*</code> / <code>?</code></td><td>Una o más, cero o más, cero o una repetición.</td></tr>
+                            <tr><td><code>( )</code> y <code>|</code></td><td>Agrupar partes del patrón y elegir entre alternativas.</td></tr>
+                            <tr><td><code>\s</code></td><td>Un espacio en blanco.</td></tr>
+                            <tr><td>Banderas <code>i</code>, <code>g</code>, <code>u</code></td><td>Ignorar mayúsculas, buscar todas las coincidencias y soportar Unicode (letras con tilde).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bloque">
+                    <h3>Patrones usados en la ficha</h3>
+                    <dl class="datos">
+                        <dt>Carnet</dt>
+                        <dd><code>/^[A-Z]{2}\d{3}$/i</code>: dos letras y tres números (AB001).</dd>
+                        <dt>Nombre completo</dt>
+                        <dd><code>/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(\s[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)+$/</code>: solo letras, al menos dos palabras.</dd>
+                        <dt>DUI</dt>
+                        <dd><code>/^\d{8}-\d$/</code>: ########-#.</dd>
+                        <dt>NIT</dt>
+                        <dd><code>/^\d{4}-\d{6}-\d{3}-\d$/</code>: ####-######-###-#.</dd>
+                        <dt>Fecha de nacimiento</dt>
+                        <dd><code>/^(\d{2})\/(\d{2})\/(\d{4})$/</code>: DD/MM/AAAA, y además se comprueba que la fecha exista.</dd>
+                        <dt>Correo electrónico</dt>
+                        <dd><code>/^[\w.+-]+@[\w-]+(\.[\w-]+)*\.[A-Za-z]{2,}$/</code>: usuario, arroba y dominio.</dd>
+                        <dt>Edad</dt>
+                        <dd><code>/^\d+$/</code>: solo números.</dd>
+                    </dl>
+                </div>
+
+            </section>
+
+
+            <section id="ficha" aria-labelledby="titulo-ficha">
+
+                <h2 id="titulo-ficha">Ficha del estudiante</h2>
+
+                <form id="idFormEstudiante" class="ficha" novalidate>
+
+                    <div class="campo">
+                        <label for="idCarnet">Carnet</label>
+                        <input type="text" id="idCarnet" placeholder="AB001" autocomplete="off">
+                        <small class="error" id="idCarnetError"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idNombre">Nombre completo</label>
+                        <input type="text" id="idNombre" placeholder="Nombres y apellidos" autocomplete="off">
+                        <small class="error" id="idNombreError"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idDui">DUI</label>
+                        <input type="text" id="idDui" placeholder="12345678-9" autocomplete="off">
+                        <small class="error" id="idDuiError"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idNit">NIT</label>
+                        <input type="text" id="idNit" placeholder="1234-123456-123-1" autocomplete="off">
+                        <small class="error" id="idNitError"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idFecha">Fecha de nacimiento</label>
+                        <input type="text" id="idFecha" placeholder="DD/MM/AAAA" autocomplete="off">
+                        <small class="error" id="idFechaError"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idCorreo">Correo electrónico</label>
+                        <input type="text" id="idCorreo" placeholder="nombre@correo.com" autocomplete="off">
+                        <small class="error" id="idCorreoError"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idEdad">Edad</label>
+                        <input type="text" id="idEdad" placeholder="18" inputmode="numeric" autocomplete="off">
+                        <small class="error" id="idEdadError"></small>
+                    </div>
+
+                    <div class="acciones">
+                        <button type="submit">Validar ficha</button>
+                        <button type="reset" class="secundario">Limpiar</button>
+                    </div>
+
+                </form>
+
+                <p id="idResultado" class="resultado" role="status" aria-live="polite"></p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <footer id="pie">
+        <p>Desarrollo Web · Guía 6 · Ejercicio complementario 3</p>
+    </footer>
+
+</body>
+
+</html>
