@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro académico | Guía 6</title>
+    <link rel="icon" href="img/js.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/registroAcademico.js" defer></script>
+</head>
+<body>
+    <main class="app-shell d-flex flex-column flex-md-row">
+        <aside class="nav-bar p-3 text-bg-dark">
+            <a class="d-flex align-items-center mb-3 text-white text-decoration-none" href="index.html">
+                <img src="img/js.png" alt="" width="32" height="32" class="me-2">
+                <span class="fs-4">JavaScript</span>
+            </a>
+            <hr>
+            <nav class="nav nav-pills flex-column gap-1" aria-label="Ejercicios de estructuras y arreglos">
+                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="registroAcademico.html">Registro académico</a>
+                <a class="nav-link" href="tablasMultiplicar.html">Tablas de multiplicar</a>
+                <a class="nav-link" href="promedioNotas.html">Promedio de notas</a>
+                <a class="nav-link" href="arreglo.html">Arreglos numéricos</a>
+                <a class="nav-link" href="../index.html#guia-6">Todas las guías</a>
+            </nav>
+        </aside>
+        <div class="colum-container">
+            <section class="lesson-card card shadow-sm">
+                <div class="card-body p-4">
+                    <h1 class="h2">Registro académico</h1>
+                    <p>Registra estudiantes en un arreglo de dos dimensiones.</p>
+                    <form id="idFormEstudiante" class="row g-3" novalidate>
+                        <div class="col-md-4">
+                            <label for="inputCarnet" class="form-label">Carnet</label>
+                            <input id="inputCarnet" class="form-control" type="text" maxlength="8" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputNombre" class="form-label">Nombres</label>
+                            <input id="inputNombre" class="form-control" type="text" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputApellidos" class="form-label">Apellidos</label>
+                            <input id="inputApellidos" class="form-control" type="text" required>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap gap-2">
+                            <button class="btn btn-success" id="idBtnAgregarEstudiante" type="submit">Registrar</button>
+                            <button class="btn btn-primary" id="idBtnMostrarEstudiantes" type="button">Mostrar estudiantes</button>
+                        </div>
+                    </form>
+                    <p id="idMensaje" class="small mt-3 mb-0" role="status" aria-live="polite"></p>
+                </div>
+            </section>
+            <section class="lesson-card card shadow-sm mt-4">
+                <div class="card-body p-4">
+                    <h2 class="h4">Estudiantes registrados</h2>
+                    <div id="idContainerEstudiantes" class="table-responsive result-area" aria-live="polite">Ninguno</div>
+                </div>
+            </section>
+            <footer class="lesson-card site-footer small"><a href="../index.html#guia-6">Volver al índice principal</a></footer>
+        </div>
+    </main>
+</body>
+</html>

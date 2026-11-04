@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tablas de multiplicar | Guía 6</title>
+    <link rel="icon" href="img/js.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tablasMultiplicar.js" defer></script>
+</head>
+<body>
+    <main class="app-shell d-flex flex-column flex-md-row">
+        <aside class="nav-bar p-3 text-bg-dark">
+            <a class="d-flex align-items-center mb-3 text-white text-decoration-none" href="index.html">
+                <img src="img/js.png" alt="" width="32" height="32" class="me-2">
+                <span class="fs-4">JavaScript</span>
+            </a>
+            <hr>
+            <nav class="nav nav-pills flex-column gap-1" aria-label="Ejercicios de estructuras y arreglos">
+                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="registroAcademico.html">Registro académico</a>
+                <a class="nav-link active" aria-current="page" href="tablasMultiplicar.html">Tablas de multiplicar</a>
+                <a class="nav-link" href="promedioNotas.html">Promedio de notas</a>
+                <a class="nav-link" href="arreglo.html">Arreglos numéricos</a>
+                <a class="nav-link" href="../index.html#guia-6">Todas las guías</a>
+            </nav>
+        </aside>
+        <div class="colum-container">
+            <section class="lesson-card card shadow-sm">
+                <div class="card-body p-4">
+                    <h1 class="h2">Tablas de multiplicar</h1>
+                    <form id="idFormTabla" class="row g-3 align-items-end">
+                        <div class="col-sm-8 col-md-5">
+                            <label class="form-label" for="inputTabla">Ingresa un número entero</label>
+                            <input id="inputTabla" class="form-control" type="number" min="1" max="100" step="1" value="1" required>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-success" id="idBtnCalcular" type="submit">Calcular</button>
+                        </div>
+                    </form>
+                    <div id="idContainerResultado" class="table-responsive result-area mt-4" aria-live="polite"></div>
+                </div>
+            </section>
+            <footer class="lesson-card site-footer small"><a href="../index.html#guia-6">Volver al índice principal</a></footer>
+        </div>
+    </main>
+</body>
+</html>
