@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo de autos | Guía 7</title>
+
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="../css/autos.css">
+    <script src="../js/autos.js" defer></script>
+</head>
+
+<body>
+
+    <header id="hero">
+
+        <div id="hero-centro">
+
+            <p class="eyebrow">Guía 07 · Complementario 2</p>
+
+            <h1 id="titulo-principal">Catálogo de autos</h1>
+
+            <p id="subtitulo">
+                Versiones de autos 2015–2020 consultadas en tiempo real con Car API de RapidAPI.
+                Elige un año y una marca, y selecciona una versión para ver su ficha técnica.
+            </p>
+
+            <nav id="navegacion" aria-label="Navegación de la Guía 7">
+                <a href="#buscador">Buscar</a>
+                <a href="../index.html">Ejemplos</a>
+                <a href="ejemplo2.html">Registro</a>
+                <a href="../../index.html#guia-7">Todas las guías</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <div id="zona-contenido">
+
+        <main id="contenido">
+
+            <section id="buscador" aria-labelledby="titulo-buscador">
+
+                <h2 id="titulo-buscador">Buscar versiones</h2>
+
+                <form id="idFormBusqueda" class="filtros">
+
+                    <div class="campo">
+                        <label for="idAnio">Año</label>
+                        <select id="idAnio"></select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idMarca">Marca</label>
+                        <select id="idMarca" disabled>
+                            <option value="">Cargando marcas…</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="idBtnBuscar">Buscar</button>
+
+                </form>
+
+                <p id="idEstado" class="estado" role="status" aria-live="polite"></p>
+
+            </section>
+
+
+            <div id="resultados">
+
+                <section id="listado" aria-labelledby="titulo-listado">
+
+                    <div class="encabezado-seccion">
+                        <h2 id="titulo-listado">Versiones</h2>
+                        <p id="idResumen" class="resumen"></p>
+                    </div>
+
+                    <ul id="idListaAutos" class="lista-autos"></ul>
+
+                    <nav id="idPaginacion" class="paginacion" aria-label="Páginas del listado" hidden>
+                        <button type="button" id="idBtnAnterior">← Anterior</button>
+                        <span id="idPagina"></span>
+                        <button type="button" id="idBtnSiguiente">Siguiente →</button>
+                    </nav>
+
+                </section>
+
+
+                <section id="detalle" aria-labelledby="titulo-detalle">
+
+                    <h2 id="titulo-detalle">Ficha técnica</h2>
+
+                    <div id="idDetalle" class="detalle">
+                        <p class="vacio">Selecciona una versión del listado para ver su detalle.</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <footer id="pie">
+        <p>Datos de <a href="https://rapidapi.com/carapi/api/car-api2" target="_blank" rel="noopener noreferrer">Car API ↗</a> · Plan gratuito con modelos 2015–2020.</p>
+    </footer>
+
+</body>
+
+</html>
