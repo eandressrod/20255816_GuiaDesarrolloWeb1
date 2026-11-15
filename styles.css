@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap");
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background: #000;
-    color: #ededed;
+    background: #060a14 url("media/fondos/ondas.svg") center top / 1600px auto no-repeat fixed;
+    color: #e9edf5;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -29,13 +31,15 @@ a:focus-visible {
 }
 
 .site-header {
-    padding-bottom: 35px;
-    border-bottom: 1px solid #272727;
+    padding: 70px 0 45px;
+    border-bottom: 1px solid rgba(201, 211, 230, .22);
 }
 
 .site-header h1 {
     margin-bottom: 8px;
-    font-size: clamp(2rem, 5vw, 2.7rem);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.6rem, 6vw, 3.6rem);
 }
 
 .site-header > p:last-child {
@@ -45,7 +49,7 @@ a:focus-visible {
 
 .eyebrow {
     margin-bottom: 10px;
-    color: #aaa;
+    color: #c9d3e6;
     font-size: .78rem;
     font-weight: 700;
     letter-spacing: .1em;
@@ -55,8 +59,8 @@ a:focus-visible {
 .guide-card {
     margin-top: 28px;
     padding: 24px;
-    border: 1px solid #343434;
-    background: #0c0c0c;
+    border: 1px solid rgba(201, 211, 230, .22);
+    background: rgba(8, 13, 26, .85);
 }
 
 .guide-heading, .analysis-heading {
@@ -99,8 +103,8 @@ a:focus-visible {
     align-items: center;
     gap: 10px 14px;
     padding: 14px 0;
-    border-top: 1px solid #343434;
-    border-bottom: 1px solid #343434;
+    border-top: 1px solid rgba(201, 211, 230, .18);
+    border-bottom: 1px solid rgba(201, 211, 230, .18);
 }
 
 .guide-index {
@@ -110,8 +114,8 @@ a:focus-visible {
     align-items: center;
     margin-top: 22px;
     padding: 20px 0;
-    border-top: 1px solid #343434;
-    border-bottom: 1px solid #343434;
+    border-top: 1px solid rgba(201, 211, 230, .18);
+    border-bottom: 1px solid rgba(201, 211, 230, .18);
 }
 
 .index-preview img {
@@ -121,10 +125,10 @@ a:focus-visible {
     aspect-ratio: 16 / 10;
     object-fit: cover;
     object-position: top;
-    border: 1px solid #343434;
+    border: 1px solid rgba(201, 211, 230, .18);
 }
 
-.index-preview:hover img {
+a.index-preview:hover img {
     border-color: #fff;
 }
 
@@ -144,7 +148,7 @@ a:focus-visible {
 
 .index-links a {
     padding: 12px 16px;
-    border: 1px solid #444;
+    border: 1px solid rgba(201, 211, 230, .3);
     color: #fff;
     font-size: .9rem;
     text-decoration: none;
@@ -171,7 +175,7 @@ a:focus-visible {
 
 .guide-strip a {
     padding: 9px 14px;
-    border: 1px solid #444;
+    border: 1px solid rgba(201, 211, 230, .3);
     color: #dedede;
     font-size: .86rem;
     text-decoration: none;
@@ -232,7 +236,7 @@ h3 {
     gap: 14px;
     padding-bottom: 12px;
     margin-bottom: 14px;
-    border-bottom: 1px solid #343434;
+    border-bottom: 1px solid rgba(201, 211, 230, .18);
     font-size: .85rem;
 }
 
@@ -252,7 +256,7 @@ h3 {
     display: block;
     width: 100%;
     height: auto;
-    border: 1px solid #343434;
+    border: 1px solid rgba(201, 211, 230, .18);
 }
 
 .description {
@@ -270,20 +274,20 @@ h3 {
 
 .ia-links a {
     padding: 12px;
-    border: 1px solid #444;
+    border: 1px solid rgba(201, 211, 230, .3);
     text-align: center;
     font-size: .9rem;
 }
 
 .extra-links {
     margin-top: 20px;
-    border-top: 1px solid #343434;
+    border-top: 1px solid rgba(201, 211, 230, .18);
 }
 
 .extra-links a, .extra-links .pending-link {
     display: block;
     padding: 13px 0;
-    border-bottom: 1px solid #343434;
+    border-bottom: 1px solid rgba(201, 211, 230, .18);
     color: #cfcfcf;
     font-size: .88rem;
     text-decoration: none;
@@ -328,8 +332,8 @@ h3 {
 .prompt-document {
     margin-top: 28px;
     padding: 24px;
-    border: 1px solid #343434;
-    background: #0c0c0c;
+    border: 1px solid rgba(201, 211, 230, .22);
+    background: rgba(8, 13, 26, .85);
 }
 
 .prompt-document h2 {
@@ -338,8 +342,8 @@ h3 {
 
 .prompt-document pre {
     padding: 20px;
-    border: 1px solid #343434;
-    background: #1a1a1a;
+    border: 1px solid rgba(201, 211, 230, .18);
+    background: #0b1120;
     color: #d5d5d5;
     font: .88rem/1.6 Arial, Helvetica, sans-serif;
     white-space: pre-wrap;
@@ -350,4 +354,10 @@ footer {
     padding-top: 28px;
     color: #888;
     font-size: .78rem;
+}
+
+.guide-card h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.9rem;
 }
